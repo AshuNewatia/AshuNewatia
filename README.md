@@ -21,8 +21,7 @@
 I build campus tools, collaborative platforms, and conversational AI.<br />
 Currently exploring voice interfaces, real-time systems, and quantum computing.
 
-[Explore my repositories ↗](https://github.com/AshuNewatia?tab=repositories) · [Voice Assistant ↗](https://github.com/AshuNewatia/Live-Voice-Agent)
-
+[Explore my repositories ↗](https://github.com/AshuNewatia?tab=repositories)
 <br />
 <img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
 
@@ -62,31 +61,48 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 <!-- GITHUB-TELEMETRY:START -->
 
-**GitHub data for [AshuNewatia](https://github.com/AshuNewatia)** · Last fetched: **2026-11-07 07:50 UTC**
+<div align="center">
 
-| Contributions¹ | Current streak² | Best streak¹ | Public repos | Stars³ | Followers |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 434 | 1 days | 5 days | 10 | 0 | 3 |
+### ⚡ 435 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
 
-<img src="./assets/analytics.svg" width="100%" alt="Automatically fetched GitHub contribution calendar; brighter cells indicate more activity" />
+**10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **3 followers**
 
-**Activity window:** 2025-11-08 → 2026-11-07 · **Active days:** 68 · **Original repositories:** 5 · **Forks:** 5
+<br />
 
-**Language distribution** — primary language of owned, non-fork public repositories.
+**CONTRIBUTION SIGNAL**
 
-| Language | Repositories | Share |
-| --- | ---: | ---: |
-| JavaScript | 2 | 50.0% |
-| Python | 1 | 25.0% |
-| TypeScript | 1 | 25.0% |
+<img src="./assets/analytics.svg" width="100%" alt="Animated circuit scanner with actual weekly contribution totals above a daily contribution calendar. The scanner is decorative; the data is fetched from GitHub." />
 
-¹ Last 365 UTC dates. Contributions follow GitHub’s profile calendar, which may include anonymized private activity if you have enabled it.
-² An unfinished UTC day with no contributions does not break yesterday’s streak.
-³ Stars received on owned, non-fork public repositories.
+<sub>2025-11-08 → 2026-11-07 · 68 active days · 5 original repos · 5 forks</sub>
 
-Sources: GitHub REST API + GitHub public contribution calendar. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
+<br /><br />
 
-[Inspect fetched data](./assets/telemetry.json) · [Refresh workflow](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
+**LANGUAGE FREQUENCIES**
+
+<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />
+
+🔵 **JavaScript 50%** · 2 repos &nbsp; / &nbsp; 🟣 **Python 25%** · 1 repo &nbsp; / &nbsp; 🟢 **TypeScript 25%** · 1 repo
+
+<br /><br />
+
+<sub>Fetched from GitHub · 2026-11-07 09:42 UTC · Hourly refresh</sub>
+
+</div>
+
+<details>
+<summary><sub>Signal definitions, sources & refresh</sub></summary>
+
+The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.
+
+Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.
+
+Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right.
+
+Sources: GitHub REST API + GitHub public contribution calendar. Timestamped hourly snapshots; no fetch runs on profile visits.
+
+[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
+
+</details>
 
 <!-- GITHUB-TELEMETRY:END -->
 
@@ -108,6 +124,8 @@ Sources: GitHub REST API + GitHub public contribution calendar. Refreshes hourly
 Team collaboration meets developer workflow. A collaborative workspace connecting team tasks with GitHub activity.
 
 **Technologies:** `React` · `Node.js` · `MongoDB` · `Socket.IO` · `GitHub integration`
+
+[View repository ↗](https://github.com/AshuNewatia/SoC)
 
 <!-- Add the exact project repository or demo link here when ready. -->
 
@@ -134,6 +152,8 @@ Real-time conversations and spoken responses. Exploring how voice can make softw
 Campus schedules, trip requests, and booking. Bringing everyday college transport into a single experience.
 
 **Technologies:** `Next.js` · `PostgreSQL`
+
+[View repository ↗](https://github.com/AshuNewatia/Instibus)
 
 <!-- Add the exact project repository or demo link here when ready. -->
 
@@ -195,6 +215,7 @@ Away from the editor: anime, chess puzzles, quizzes, and physics or mathematics 
 **Let's make the next one useful.**
 
 [GitHub ↗](https://github.com/AshuNewatia)
+[Linkedin ↗](https://www.linkedin.com/in/ashunewatia23/)
 
 <!-- EDIT: add verified LinkedIn, portfolio or public email links here. -->
 

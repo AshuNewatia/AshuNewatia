@@ -139,40 +139,97 @@ def summarize(user, repos, days, now, source):
 def markdown(data):
     m, u = data['metrics'], data['username']
     stamp = datetime.fromisoformat(data['fetched_at']).strftime('%Y-%m-%d %H:%M UTC')
-    lines = [START, '', f'**GitHub data for [{u}](https://github.com/{u})** · Last fetched: **{stamp}**', '',
-        '| Contributions¹ | Current streak² | Best streak¹ | Public repos | Stars³ | Followers |',
-        '| ---: | ---: | ---: | ---: | ---: | ---: |',
-        f"| {m['contributions']:,} | {m['current_streak_days']} days | {m['best_streak_days']} days | {m['public_repositories']} | {m['stars_on_original_repositories']} | {m['followers']} |", '',
-        '<img src="./assets/analytics.svg" width="100%" alt="Automatically fetched GitHub contribution calendar; brighter cells indicate more activity" />', '',
-        f"**Activity window:** {data['window']['from']} → {data['window']['to']} · **Active days:** {m['active_days']} · **Original repositories:** {m['original_repositories']} · **Forks:** {m['forked_repositories']}", '',
-        '**Language distribution** — primary language of owned, non-fork public repositories.', '',
-        '| Language | Repositories | Share |', '| --- | ---: | ---: |']
+    def days(n): return f'{n}-day'
+    lines = [START, '', '<div align="center">', '',
+        f"### ⚡ {m['contributions']:,} contributions &nbsp; · &nbsp; {days(m['current_streak_days'])} streak &nbsp; · &nbsp; {days(m['best_streak_days'])} best", '',
+        f"**{m['public_repositories']} repositories** &nbsp; / &nbsp; **{m['stars_on_original_repositories']} stars** &nbsp; / &nbsp; **{m['followers']} followers**", '',
+        '<br />', '', '**CONTRIBUTION SIGNAL**', '',
+        '<img src="./assets/analytics.svg" width="100%" alt="Animated circuit scanner with actual weekly contribution totals above a daily contribution calendar. The scanner is decorative; the data is fetched from GitHub." />', '',
+        f"<sub>{data['window']['from']} → {data['window']['to']} · {m['active_days']} active days · {m['original_repositories']} original repos · {m['forked_repositories']} forks</sub>", '',
+        '<br /><br />', '', '**LANGUAGE FREQUENCIES**', '',
+        '<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />', '']
     langs = data['languages_by_primary_repository_count']
     total = sum(langs.values())
-    for name, count in langs.items():
-        name = name.replace('|', '\\|').replace('\n', ' ')
-        lines.append(f'| {name} | {count} | {count/total:.1%} |')
-    if not total:
-        lines.append('| No detected languages | 0 | — |')
-    lines += ['', '¹ Last 365 UTC dates. Contributions follow GitHub’s profile calendar, which may include anonymized private activity if you have enabled it.',
-              '² An unfinished UTC day with no contributions does not break yesterday’s streak.',
-              '³ Stars received on owned, non-fork public repositories.', '',
-              f"Sources: GitHub REST API + {data['sources']['contributions']}. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.", '',
-              f'[Inspect fetched data](./assets/telemetry.json) · [Refresh workflow](https://github.com/{u}/{u}/actions/workflows/profile-analytics.yml)', '', END]
+    symbols = ['🔵', '🟣', '🟢', '🟠', '🩷']
+    legend = []
+    for i, (name, count) in enumerate(langs.items()):
+        name = escape(name)
+        legend.append(f"{symbols[i%len(symbols)]} **{name} {count/total:.0%}** · {count} {'repo' if count == 1 else 'repos'}")
+    lines += [' &nbsp; / &nbsp; '.join(legend) if total else 'No detected languages', '',
+        '<br /><br />', '', f'<sub>Fetched from GitHub · {stamp} · Hourly refresh</sub>', '', '</div>', '',
+        '<details>', '<summary><sub>Signal definitions, sources & refresh</sub></summary>', '',
+        'The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.', '',
+        'Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.', '',
+        'Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right.', '',
+        f"Sources: GitHub REST API + {data['sources']['contributions']}. Timestamped hourly snapshots; no fetch runs on profile visits.", '',
+        f'[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/{u}/{u}/actions/workflows/profile-analytics.yml)', '', '</details>', '', END]
     return '\n'.join(lines)
 
 
+def svg_start(height):
+    return [f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="{height}" viewBox="0 0 1000 {height}" fill="none">',
+        '<defs><linearGradient id="signal"><stop stop-color="#22D3EE"/><stop offset=".55" stop-color="#A78BFA"/><stop offset="1" stop-color="#F472B6"/></linearGradient><linearGradient id="fill" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient><linearGradient id="scan"><stop stop-color="#67E8F9" stop-opacity="0"/><stop offset="1" stop-color="#67E8F9" stop-opacity=".22"/></linearGradient><filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter></defs>',
+        '<style>@media(prefers-reduced-motion:reduce){.motion{display:none}}</style>']
+
+
 def calendar_svg(data):
+    import math
     days = data['calendar']
     start = date.fromisoformat(days[0]['date'])
     start -= timedelta(days=(start.weekday()+1) % 7)
-    colors = ['#162536', '#14515D', '#168396', '#20B7CA', '#67E8F9']
-    parts = ['<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="162" viewBox="0 0 1000 162" fill="none">', '<path d="M20 12H980" stroke="#253B4C"/>']
+    weekly = {}
     for d in days:
         index = (date.fromisoformat(d['date'])-start).days
         col, row = divmod(index, 7)
-        parts.append(f'<rect x="{22+col*18}" y="{25+row*16}" width="14" height="12" rx="2" fill="{colors[d["level"]]}"/>')
-    parts += ['<path d="M20 150H980" stroke="#253B4C"/>', '</svg>']
+        weekly[col] = weekly.get(col, 0) + d['count']
+    peak = max(weekly.values()) or 1
+    points = [(210+i*750/max(1,len(weekly)-1), 124-n*95/peak) for i,n in enumerate(weekly.values())]
+    path = 'M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in points)
+    parts = svg_start(350)
+    parts += ['<path d="M24 157H976" stroke="#263849"/>',
+        '<path d="M24 13H135L152 30M865 13H976" stroke="#263849"/>']
+    for y in [31,62,93,124]:parts.append(f'<path d="M210 {y}H960" stroke="#1D2C3B" stroke-dasharray="2 8"/>')
+    parts += [f'<path d="{path} L960 140H210Z" fill="url(#fill)"/>',
+              f'<path d="{path}" stroke="url(#signal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+              f'<path d="{path}" stroke="#67E8F9" stroke-width="4" filter="url(#glow)" opacity=".18"/>',
+              f'<circle class="motion" r="3" fill="#E5F6FF"><animateMotion path="{path}" dur="12s" repeatCount="indefinite"/></circle>']
+    # Orbit and moving signal links are decorative; no changing text is baked in.
+    parts += ['<circle cx="89" cy="79" r="48" stroke="#263849"/>',
+              '<circle cx="89" cy="79" r="33" stroke="#22D3EE" opacity=".3"/>',
+              '<circle class="motion" cx="89" cy="79" r="48" stroke="#A78BFA" stroke-width="2" stroke-dasharray="45 106"><animateTransform attributeName="transform" type="rotate" values="0 89 79;360 89 79" dur="14s" repeatCount="indefinite"/></circle>',
+              '<path d="M54 79H70L78 63L90 96L102 70L110 79H126" stroke="#67E8F9" stroke-width="2"/>',
+              '<path d="M138 79H162L185 124H210" stroke="#345269"/>',
+              '<circle class="motion" r="2.5" fill="#67E8F9"><animateMotion path="M138 79H162L185 124H210" dur="3s" repeatCount="indefinite"/></circle>']
+    colors = ['#152337','#154A59','#16899B','#23BFCC','#82F5E3']
+    lastx = 0
+    for d in days:
+        index = (date.fromisoformat(d['date'])-start).days
+        col,row = divmod(index,7)
+        x=28+col*18;lastx=max(lastx,x)
+        parts.append(f'<rect x="{x}" y="{184+row*18}" width="13" height="13" rx="2" fill="{colors[d["level"]]}"/>')
+    parts += [f'<clipPath id="matrix"><rect x="24" y="176" width="{lastx+20-24}" height="139"/></clipPath>',
+              '<g clip-path="url(#matrix)"><rect class="motion" x="-70" y="177" width="70" height="138" fill="url(#scan)"><animate attributeName="x" values="-70;1000" dur="10s" repeatCount="indefinite"/></rect></g>',
+              '<path d="M24 334H420L434 324H566L580 334H976" stroke="#263849"/>',
+              '<path class="motion" d="M24 334H420L434 324H566L580 334H976" stroke="url(#signal)" pathLength="1" stroke-dasharray=".06 .94"><animate attributeName="stroke-dashoffset" values="1;0" dur="8s" repeatCount="indefinite"/></path>', '</svg>']
+    return '\n'.join(parts)
+
+
+def language_svg(data):
+    langs = data['languages_by_primary_repository_count']
+    total = sum(langs.values())
+    parts = svg_start(86)
+    parts += ['<path d="M24 20H976M24 66H976" stroke="#223344"/>']
+    palette = ['#22D3EE','#A78BFA','#A3E635','#FBBF24','#F472B6']
+    x=24
+    for i,(name,count) in enumerate(langs.items()):
+        width=952*count/total
+        parts += [f'<rect x="{x:.2f}" y="33" width="{width:.2f}" height="16" fill="{palette[i%5]}" opacity=".8"/>',
+                  f'<path d="M{x:.2f} 56H{x+width:.2f}" stroke="{palette[i%5]}" opacity=".2"/>']
+        if i:parts.append(f'<path d="M{x:.2f} 33V49" stroke="#0D1117" stroke-width="3"/>')
+        x+=width
+    if not total:parts.append('<path d="M24 41H976" stroke="#263849" stroke-dasharray="3 8"/>')
+    parts += ['<rect class="motion" x="-60" y="33" width="60" height="16" fill="url(#scan)"><animate attributeName="x" values="-60;1000" dur="6s" repeatCount="indefinite"/></rect>',
+              '<circle class="motion" cy="66" r="2" fill="#67E8F9"><animate attributeName="cx" values="24;976" dur="6s" repeatCount="indefinite"/></circle>', '</svg>']
     return '\n'.join(parts)
 
 
@@ -203,7 +260,7 @@ def main():
     _, after = tail.split(END, 1)
     updated = before + markdown(data) + after
     # Fetches, validation and rendering all succeed before any output is replaced.
-    outputs = {ROOT/'assets/analytics.svg': calendar_svg(data), ROOT/'assets/telemetry.json': json.dumps(data, indent=2)+'\n', readme_path: updated}
+    outputs = {ROOT/'assets/analytics.svg': calendar_svg(data), ROOT/'assets/language-signal.svg': language_svg(data), ROOT/'assets/telemetry.json': json.dumps(data, indent=2)+'\n', readme_path: updated}
     temps = []
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)

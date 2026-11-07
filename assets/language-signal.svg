@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="86" viewBox="0 0 1000 86" fill="none">
+<defs><linearGradient id="signal"><stop stop-color="#22D3EE"/><stop offset=".55" stop-color="#A78BFA"/><stop offset="1" stop-color="#F472B6"/></linearGradient><linearGradient id="fill" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="#22D3EE" stop-opacity=".16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient><linearGradient id="scan"><stop stop-color="#67E8F9" stop-opacity="0"/><stop offset="1" stop-color="#67E8F9" stop-opacity=".22"/></linearGradient><filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<style>@media(prefers-reduced-motion:reduce){.motion{display:none}}</style>
+<path d="M24 20H976M24 66H976" stroke="#223344"/>
+<rect x="24.00" y="33" width="476.00" height="16" fill="#22D3EE" opacity=".8"/>
+<path d="M24.00 56H500.00" stroke="#22D3EE" opacity=".2"/>
+<rect x="500.00" y="33" width="238.00" height="16" fill="#A78BFA" opacity=".8"/>
+<path d="M500.00 56H738.00" stroke="#A78BFA" opacity=".2"/>
+<path d="M500.00 33V49" stroke="#0D1117" stroke-width="3"/>
+<rect x="738.00" y="33" width="238.00" height="16" fill="#A3E635" opacity=".8"/>
+<path d="M738.00 56H976.00" stroke="#A3E635" opacity=".2"/>
+<path d="M738.00 33V49" stroke="#0D1117" stroke-width="3"/>
+<rect class="motion" x="-60" y="33" width="60" height="16" fill="url(#scan)"><animate attributeName="x" values="-60;1000" dur="6s" repeatCount="indefinite"/></rect>
+<circle class="motion" cy="66" r="2" fill="#67E8F9"><animate attributeName="cx" values="24;976" dur="6s" repeatCount="indefinite"/></circle>
+</svg>
