@@ -55,7 +55,7 @@
 
 <div align="center">
 
-### ⚡ 440 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
+### ⚡ 442 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
 
 **10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **3 followers**
 
@@ -67,8 +67,45 @@
 
 <sub>2025-11-08 → 2026-11-07 · 68 active days · 5 original repos · 5 forks</sub>
 
+<br /><br />
+
+**LANGUAGE FREQUENCIES**
+
+<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />
+
+🔵 **JavaScript 50%** · 2 repos &nbsp; / &nbsp; 🟣 **Python 25%** · 1 repo &nbsp; / &nbsp; 🟢 **TypeScript 25%** · 1 repo
+
+<br /><br />
+
+**RECENTLY ACTIVE REPOSITORIES**
+
+| Repository | About | Language | ★ | Last push |
+| --- | --- | --- | ---: | --- |
+| [Live-Voice-Agent](https://github.com/AshuNewatia/Live-Voice-Agent) | — | TypeScript | 0 | 2026-10-25 |
+| [SoC](https://github.com/AshuNewatia/SoC) | — | JavaScript | 0 | 2026-08-22 |
+| [MyTestRepo](https://github.com/AshuNewatia/MyTestRepo) | — | — | 0 | 2026-06-22 |
+| [gdgps-2](https://github.com/AshuNewatia/gdgps-2) | — | JavaScript | 0 | 2026-01-28 |
+
+<br /><br />
+
+<sub>Fetched from GitHub · 2026-11-07 17:11 UTC · Hourly refresh</sub>
 
 </div>
+
+<details>
+<summary><sub>Signal definitions, sources & refresh</sub></summary>
+
+The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.
+
+Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.
+
+Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right. The repository table lists your five most recently pushed original public repositories (this profile repository excluded).
+
+Sources: GitHub REST API + GitHub GraphQL API. Timestamped hourly snapshots; no fetch runs on profile visits.
+
+[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
+
+</details>
 
 <!-- GITHUB-TELEMETRY:END -->
 
