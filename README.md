@@ -1,7 +1,9 @@
 <div align="center">
 
 <!-- All custom art is included in assets/. Upload that folder with this README. -->
-<img src="./assets/hero.png" width="100%" alt="Ashu Newatia — Build. Experiment. Iterate. A cyan and violet futuristic developer workstation overlooking an illustrated IIT Indore campus." />
+<a href="https://giphy.com/gifs/cyberpunkgame-cyberpunk-cp-cyberpunk2077-SUcnmocyRKkfSil9xd"><img src="./assets/waneella.gif" width="100%" alt="Animated Night City skyline with neon lights and flying vehicles, from Cyberpunk 2077 on GIPHY." /></a>
+
+<sub>GIF: <a href="https://giphy.com/gifs/cyberpunkgame-cyberpunk-cp-cyberpunk2077-SUcnmocyRKkfSil9xd">Cyberpunk 2077 / CD PROJEKT RED · GIPHY</a></sub>
 
 <br />
 
@@ -15,7 +17,7 @@
 <img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
 <br /><br />
 
-<img src="./assets/terminal.svg" width="100%" alt="About Ashu: IIT Indore student building full-stack products and conversational AI, exploring voice interfaces, real-time systems and quantum computing." />
+<img src="./assets/identity.svg" width="100%" alt="About Ashu: IIT Indore student building full-stack products and conversational AI, exploring voice interfaces, real-time systems and quantum computing." />
 
 </div>
 
@@ -61,11 +63,11 @@
 
 <br />
 
-### `05 / CURRENT DIRECTIVES`
+<div align="center">
 
-- **Build** useful campus products and interfaces people enjoy using.
-- **Explore** voice AI, real-time collaboration, and quantum computing.
-- **Improve** data structures, algorithms, and problem solving in C++.
+<img src="./assets/directives.svg" width="100%" alt="The next iteration: Build useful campus products; explore voice AI, real-time systems and quantum computing; improve algorithms and problem solving in C++." />
+
+</div>
 
 <details>
 <summary><b><code>OPEN / PERSONAL.LOG</code></b></summary>
