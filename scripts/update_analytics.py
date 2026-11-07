@@ -111,6 +111,13 @@ def summarize(user, repos, days, now, source):
     repos = [r for r in repos if not r.get('private', False)]
     original = [r for r in repos if not r['fork']]
     languages = Counter(r['language'] for r in original if r.get('language'))
+    profile_repo = user['login'].lower()
+    recent = sorted((r for r in original if r.get('name') and r['name'].lower() != profile_repo),
+                    key=lambda r: r.get('pushed_at') or '', reverse=True)[:5]
+    recent_repositories = [{'name': r['name'], 'url': r.get('html_url') or f"https://github.com/{user['login']}/{r['name']}",
+                            'description': r.get('description') or '', 'language': r.get('language') or '',
+                            'stars': r.get('stargazers_count', 0), 'pushed_at': (r.get('pushed_at') or '')[:10]}
+                           for r in recent]
     best = run = 0
     for d in ordered:
         run = run + 1 if d['count'] else 0
@@ -132,7 +139,8 @@ def summarize(user, repos, days, now, source):
                     'original_repositories': len(original), 'forked_repositories': len(repos)-len(original),
                     'stars_on_original_repositories': sum(r['stargazers_count'] for r in original),
                     'followers': user['followers'], 'active_days': sum(bool(d['count']) for d in ordered)},
-        'languages_by_primary_repository_count': dict(languages.most_common()), 'calendar': ordered,
+        'languages_by_primary_repository_count': dict(languages.most_common()),
+        'recent_repositories': recent_repositories, 'calendar': ordered,
     }
 
 
@@ -155,12 +163,23 @@ def markdown(data):
     for i, (name, count) in enumerate(langs.items()):
         name = escape(name)
         legend.append(f"{symbols[i%len(symbols)]} **{name} {count/total:.0%}** · {count} {'repo' if count == 1 else 'repos'}")
-    lines += [' &nbsp; / &nbsp; '.join(legend) if total else 'No detected languages', '',
-        '<br /><br />', '', f'<sub>Fetched from GitHub · {stamp} · Hourly refresh</sub>', '', '</div>', '',
+    lines += [' &nbsp; / &nbsp; '.join(legend) if total else 'No detected languages', '']
+    recent = data.get('recent_repositories') or []
+    if recent:
+        def cell(text, limit=80):
+            text = ' '.join(str(text).split())
+            text = text if len(text) <= limit else text[:limit-1].rstrip() + '…'
+            return escape(text).replace('|', '&#124;')
+        lines += ['<br /><br />', '', '**RECENTLY ACTIVE REPOSITORIES**', '',
+                  '| Repository | About | Language | ★ | Last push |', '| --- | --- | --- | ---: | --- |']
+        for r in recent:
+            lines.append(f"| [{cell(r['name'], 40)}]({r['url']}) | {cell(r['description']) or '—'} | {cell(r['language']) or '—'} | {int(r['stars'])} | {cell(r['pushed_at']) or '—'} |")
+        lines.append('')
+    lines += ['<br /><br />', '', f'<sub>Fetched from GitHub · {stamp} · Hourly refresh</sub>', '', '</div>', '',
         '<details>', '<summary><sub>Signal definitions, sources & refresh</sub></summary>', '',
         'The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.', '',
         'Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.', '',
-        'Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right.', '',
+        'Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right. The repository table lists your five most recently pushed original public repositories (this profile repository excluded).', '',
         f"Sources: GitHub REST API + {data['sources']['contributions']}. Timestamped hourly snapshots; no fetch runs on profile visits.", '',
         f'[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/{u}/{u}/actions/workflows/profile-analytics.yml)', '', '</details>', '', END]
     return '\n'.join(lines)

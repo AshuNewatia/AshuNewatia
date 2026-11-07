@@ -37,4 +37,18 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(data['metrics']['current_streak_days'],0)
         self.assertIn('No detected languages',m.markdown(data))
 
+    def test_recent_repositories_are_sorted_and_rendered(self):
+        repos = [
+            {'name':'old','fork':False,'language':'C++','stargazers_count':0,'pushed_at':'2025-01-01T00:00:00Z','html_url':'https://github.com/AshuNewatia/old'},
+            {'name':'new','fork':False,'language':'Python','stargazers_count':2,'pushed_at':'2026-10-01T00:00:00Z','description':'A | pipe','html_url':'https://github.com/AshuNewatia/new'},
+            {'name':'AshuNewatia','fork':False,'language':None,'stargazers_count':0,'pushed_at':'2026-11-01T00:00:00Z'},
+            {'name':'forked','fork':True,'language':'Go','stargazers_count':9,'pushed_at':'2026-11-05T00:00:00Z'},
+        ]
+        data = m.summarize(self.user, repos, self.days, self.now, 'API')
+        self.assertEqual([r['name'] for r in data['recent_repositories']], ['new', 'old'])
+        md = m.markdown(data)
+        self.assertIn('RECENTLY ACTIVE REPOSITORIES', md)
+        self.assertIn('A &#124; pipe', md)
+        self.assertNotIn('forked', md)
+
 if __name__=='__main__':unittest.main()
