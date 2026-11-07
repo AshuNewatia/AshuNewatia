@@ -1,6 +1,6 @@
 <!-- CONTENT GUIDE: Edit the text in this file to update your profile.
      SVG assets contain decorative shapes only. No image regeneration is needed.
-     The analytics chart is refreshed automatically by the existing workflow. -->
+     The telemetry numbers are generated from GitHub; only the marked telemetry block is overwritten by the hourly workflow. -->
 
 <div align="center">
 
@@ -60,11 +60,35 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 ### `03 / GITHUB TELEMETRY`
 
-<!-- AUTOMATIC: edit the analytics script only to change chart styling or account.
-     Values are fetched by the workflow; do not hand-edit the generated SVG. -->
-<a href="https://github.com/AshuNewatia?tab=overview"><img src="./assets/analytics.svg" width="100%" alt="Automatically updated public GitHub contribution calendar, streaks, repositories, stars, followers and language distribution" /></a>
+<!-- GITHUB-TELEMETRY:START -->
 
-<sub>Public GitHub data · Snapshot timestamp inside chart · Language shares count primary languages of owned non-fork public repositories.</sub>
+**GitHub data for [AshuNewatia](https://github.com/AshuNewatia)** · Last fetched: **2026-11-07 07:50 UTC**
+
+| Contributions¹ | Current streak² | Best streak¹ | Public repos | Stars³ | Followers |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 434 | 1 days | 5 days | 10 | 0 | 3 |
+
+<img src="./assets/analytics.svg" width="100%" alt="Automatically fetched GitHub contribution calendar; brighter cells indicate more activity" />
+
+**Activity window:** 2025-11-08 → 2026-11-07 · **Active days:** 68 · **Original repositories:** 5 · **Forks:** 5
+
+**Language distribution** — primary language of owned, non-fork public repositories.
+
+| Language | Repositories | Share |
+| --- | ---: | ---: |
+| JavaScript | 2 | 50.0% |
+| Python | 1 | 25.0% |
+| TypeScript | 1 | 25.0% |
+
+¹ Last 365 UTC dates. Contributions follow GitHub’s profile calendar, which may include anonymized private activity if you have enabled it.
+² An unfinished UTC day with no contributions does not break yesterday’s streak.
+³ Stars received on owned, non-fork public repositories.
+
+Sources: GitHub REST API + GitHub public contribution calendar. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
+
+[Inspect fetched data](./assets/telemetry.json) · [Refresh workflow](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
+
+<!-- GITHUB-TELEMETRY:END -->
 
 <br />
 
