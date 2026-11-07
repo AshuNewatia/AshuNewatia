@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="25" viewBox="0 0 1000 25"><path d="M0 12H350L363 2H635L650 12H1000" fill="none" stroke="#26344F"/><path d="M0 12H350L363 2H635L650 12H1000" fill="none" stroke="#22D3EE" stroke-dasharray="60 1000"><animate attributeName="stroke-dashoffset" from="1060" to="-1060" dur="6s" repeatCount="indefinite"/></path></svg>
