@@ -17,7 +17,7 @@
 <img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
 <br /><br />
 
-<img src="./assets/identity.svg" width="100%" alt="About Ashu: IIT Indore student building full-stack products and conversational AI, exploring voice interfaces, real-time systems and quantum computing." />
+<img src="./assets/identity-motion.gif" width="100%" alt="Animated holographic identity: Ashu, IIT Indore student building full-stack products and conversational AI, exploring voice interfaces, real-time systems and quantum computing." />
 
 </div>
 
@@ -53,7 +53,7 @@
 
 <br /><br /><br />
 
-<img src="./assets/projects.svg" width="100%" alt="Selected builds: CampusFlow collaborative workspace; Live Voice Assistant; Instibus campus transport; TEDx, GDG and SnT campus web experiences." />
+<img src="./assets/projects-motion.gif" width="100%" alt="Animated project constellation: CampusFlow collaborative workspace; Live Voice Assistant; Instibus campus transport; TEDx, GDG and SnT campus web experiences." />
 
 <br />
 
@@ -65,7 +65,7 @@
 
 <div align="center">
 
-<img src="./assets/directives.svg" width="100%" alt="The next iteration: Build useful campus products; explore voice AI, real-time systems and quantum computing; improve algorithms and problem solving in C++." />
+<img src="./assets/directives-motion.gif" width="100%" alt="Animated continuous loop: Build useful campus products; explore voice AI, real-time systems and quantum computing; improve algorithms and problem solving in C++." />
 
 </div>
 
