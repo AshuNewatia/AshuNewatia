@@ -1,6 +1,6 @@
 {
   "username": "AshuNewatia",
-  "fetched_at": "2026-11-07T09:39:04.828004+00:00",
+  "fetched_at": "2026-11-07T17:04:57.081396+00:00",
   "sources": {
     "profile_and_repositories": "GitHub REST API",
     "contributions": "GitHub GraphQL API"
@@ -11,7 +11,7 @@
     "timezone": "UTC"
   },
   "metrics": {
-    "contributions": 435,
+    "contributions": 440,
     "current_streak_days": 1,
     "best_streak_days": 5,
     "public_repositories": 10,
@@ -26,6 +26,40 @@
     "Python": 1,
     "TypeScript": 1
   },
+  "recent_repositories": [
+    {
+      "name": "Live-Voice-Agent",
+      "url": "https://github.com/AshuNewatia/Live-Voice-Agent",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 0,
+      "pushed_at": "2026-10-25"
+    },
+    {
+      "name": "SoC",
+      "url": "https://github.com/AshuNewatia/SoC",
+      "description": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "pushed_at": "2026-08-22"
+    },
+    {
+      "name": "MyTestRepo",
+      "url": "https://github.com/AshuNewatia/MyTestRepo",
+      "description": "",
+      "language": "",
+      "stars": 0,
+      "pushed_at": "2026-06-22"
+    },
+    {
+      "name": "gdgps-2",
+      "url": "https://github.com/AshuNewatia/gdgps-2",
+      "description": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "pushed_at": "2026-01-28"
+    }
+  ],
   "calendar": [
     {
       "date": "2025-11-08",
@@ -1849,8 +1883,8 @@
     },
     {
       "date": "2026-11-07",
-      "level": 2,
-      "count": 10
+      "level": 3,
+      "count": 15
     }
   ]
 }

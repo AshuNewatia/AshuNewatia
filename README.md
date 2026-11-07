@@ -64,7 +64,7 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 <div align="center">
 
-### ⚡ 435 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
+### ⚡ 440 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
 
 **10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **3 followers**
 
@@ -76,7 +76,7 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 <sub>2025-11-08 → 2026-11-07 · 68 active days · 5 original repos · 5 forks</sub>
 
-Sources: GitHub REST API + GitHub GraphQL API. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
+<br /><br />
 
 **LANGUAGE FREQUENCIES**
 
@@ -86,7 +86,18 @@ Sources: GitHub REST API + GitHub GraphQL API. Refreshes hourly via GitHub Actio
 
 <br /><br />
 
-<sub>Fetched from GitHub · 2026-11-07 09:42 UTC · Hourly refresh</sub>
+**RECENTLY ACTIVE REPOSITORIES**
+
+| Repository | About | Language | ★ | Last push |
+| --- | --- | --- | ---: | --- |
+| [Live-Voice-Agent](https://github.com/AshuNewatia/Live-Voice-Agent) | — | TypeScript | 0 | 2026-10-25 |
+| [SoC](https://github.com/AshuNewatia/SoC) | — | JavaScript | 0 | 2026-08-22 |
+| [MyTestRepo](https://github.com/AshuNewatia/MyTestRepo) | — | — | 0 | 2026-06-22 |
+| [gdgps-2](https://github.com/AshuNewatia/gdgps-2) | — | JavaScript | 0 | 2026-01-28 |
+
+<br /><br />
+
+<sub>Fetched from GitHub · 2026-11-07 17:04 UTC · Hourly refresh</sub>
 
 </div>
 
@@ -97,9 +108,9 @@ The upper signal plots actual weekly contribution totals; the matrix below shows
 
 Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.
 
-Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right.
+Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right. The repository table lists your five most recently pushed original public repositories (this profile repository excluded).
 
-Sources: GitHub REST API + GitHub public contribution calendar. Timestamped hourly snapshots; no fetch runs on profile visits.
+Sources: GitHub REST API + GitHub GraphQL API. Timestamped hourly snapshots; no fetch runs on profile visits.
 
 [Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
 
