@@ -75,7 +75,7 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 <sub>2025-11-08 → 2026-11-07 · 68 active days · 5 original repos · 5 forks</sub>
 
-<br /><br />
+Sources: GitHub REST API + GitHub GraphQL API. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
 
 **LANGUAGE FREQUENCIES**
 
