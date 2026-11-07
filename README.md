@@ -62,11 +62,11 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 
 <!-- GITHUB-TELEMETRY:START -->
 
-**GitHub data for [AshuNewatia](https://github.com/AshuNewatia)** · Last fetched: **2026-11-07 07:50 UTC**
+**GitHub data for [AshuNewatia](https://github.com/AshuNewatia)** · Last fetched: **2026-11-07 09:39 UTC**
 
 | Contributions¹ | Current streak² | Best streak¹ | Public repos | Stars³ | Followers |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 434 | 1 days | 5 days | 10 | 0 | 3 |
+| 435 | 1 days | 5 days | 10 | 0 | 3 |
 
 <img src="./assets/analytics.svg" width="100%" alt="Automatically fetched GitHub contribution calendar; brighter cells indicate more activity" />
 
@@ -84,7 +84,7 @@ Currently exploring voice interfaces, real-time systems, and quantum computing.
 ² An unfinished UTC day with no contributions does not break yesterday’s streak.
 ³ Stars received on owned, non-fork public repositories.
 
-Sources: GitHub REST API + GitHub public contribution calendar. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
+Sources: GitHub REST API + GitHub GraphQL API. Refreshes hourly via GitHub Actions; this is a timestamped snapshot, not a request on every profile visit.
 
 [Inspect fetched data](./assets/telemetry.json) · [Refresh workflow](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
 

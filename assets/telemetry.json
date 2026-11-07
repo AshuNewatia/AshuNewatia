@@ -1,9 +1,9 @@
 {
   "username": "AshuNewatia",
-  "fetched_at": "2026-11-07T07:50:22.627480+00:00",
+  "fetched_at": "2026-11-07T09:39:04.828004+00:00",
   "sources": {
     "profile_and_repositories": "GitHub REST API",
-    "contributions": "GitHub public contribution calendar"
+    "contributions": "GitHub GraphQL API"
   },
   "window": {
     "from": "2025-11-08",
@@ -11,7 +11,7 @@
     "timezone": "UTC"
   },
   "metrics": {
-    "contributions": 434,
+    "contributions": 435,
     "current_streak_days": 1,
     "best_streak_days": 5,
     "public_repositories": 10,
@@ -1850,7 +1850,7 @@
     {
       "date": "2026-11-07",
       "level": 2,
-      "count": 9
+      "count": 10
     }
   ]
 }
