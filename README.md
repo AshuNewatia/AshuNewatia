@@ -1,70 +1,85 @@
 <div align="center">
 
-# Hey, I'm Ashu 👋
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=0EA5E9&center=true&vCenter=true&width=800&height=60&lines=>+Hello,+World!+I'm+Ashu+Newatia_;>+Initializing+workspace...;>+Match+found:+Full-Stack+Developer;>+Match+found:+Voice+AI+Enthusiast;>+System.out.println(%22IIT+Indore%22);>+Building+ideas+into+experiences_" alt="Terminal Typing Effect" />
 
-### Building ideas into experiences.
+**`[ Full-Stack Development ]` `[ Conversational AI ]` `[ Competitive Programming ]`**
 
-**IIT Indore · Full-stack development · AI · Problem solving**
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=500&amp;size=20&amp;duration=2800&amp;pause=1000&amp;color=38BDF8&amp;center=true&amp;vCenter=true&amp;width=650&amp;lines=From+an+idea+to+a+working+product.;Web+apps.+Voice+AI.+Creative+interfaces.;Always+building.+Always+learning." alt="Animated introduction: From an idea to a working product. Web apps, voice AI, creative interfaces. Always building, always learning." />
-
-[![Explore my projects](https://img.shields.io/badge/Explore_my_projects-0F172A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AshuNewatia?tab=repositories)
+[![Explore my projects](https://img.shields.io/badge/Explore_Repositories-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8)](https://github.com/AshuNewatia?tab=repositories)
 
 </div>
 
 ---
 
-### A little about me
+### 👨‍💻 About The Developer
 
-I'm Ashu Newatia, a student at **IIT Indore** who enjoys turning practical problems into useful software. My interests span full-stack applications, conversational AI, and interfaces that make products enjoyable to use.
+I am a student at **IIT Indore** operating at the intersection of practical problem-solving and scalable software. Whether it's architecting collaborative campus tools, experimenting with low-latency conversational AI, or diving into competitive programming, I build systems that make an impact.
 
-- 🛠️ I build campus tools, collaborative platforms, and interactive web experiences.
-- 🎙️ I explore voice assistants and real-time AI interactions.
-- 🧩 I practice data structures, algorithms, and competitive programming in C++.
-- ⚛️ I'm curious about quantum computing and how things work under the hood.
+- ⚡ **Current Focus:** Real-time AI interactions, voice assistants, and optimized web experiences.
+- ⚙️ **Under the Hood:** Data structures, algorithms, and C++ problem-solving.
+- 🔬 **Exploring:** The mathematics and theory behind Quantum Computing.
+- 🏗️ **Building:** Campus tech ecosystems (TEDx, GDG, Science & Tech Council).
 
-### My toolkit
+---
 
-<p>
-  <img src="https://skillicons.dev/icons?i=cpp,python,js,ts,react,nextjs,html,css,tailwind&amp;perline=9" alt="C++, Python, JavaScript, TypeScript, React, Next.js, HTML, CSS, Tailwind CSS" />
-</p>
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,git,github,vscode&amp;perline=9" alt="Node.js, Express, MongoDB, PostgreSQL, Git, GitHub, VS Code" />
-</p>
+### 🛠️ System Configuration (Tech Stack)
 
-### Things I've been building
+<table>
+  <tr>
+    <td align="center" width="30%"><b>Frontend Architecture</b></td>
+    <td align="center" width="40%"><b>Backend & Database</b></td>
+    <td align="center" width="30%"><b>Tools & Version Control</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind&perline=4" alt="Frontend" /></td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,python,cpp&perline=4" alt="Backend" /></td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=git,github,vscode,linux&perline=4" alt="Tools" /></td>
+  </tr>
+</table>
 
-| Project | The idea | Technologies |
+---
+
+### 🚀 Compiled Projects
+
+| 📂 Directory / Project | 📝 Execution Summary | 🧩 Tech Stack |
 | :--- | :--- | :--- |
-| **CampusFlow** | A collaborative workspace connecting team tasks with GitHub workflows. | React · Node.js · MongoDB · Socket.IO |
-| **Instibus** | A campus transport application with weekly schedules and trip booking. | Next.js · PostgreSQL |
-| **[Voice Assistant](https://github.com/AshuNewatia/Live-Voice-Agent)** | A conversational assistant with spoken input and responses. | TypeScript · LiveKit · Speech AI |
-| **Campus websites** | Web experiences for TEDx, GDG, and the Science & Technology Council at IIT Indore. | React · Next.js · Three.js |
+| **[CampusFlow](https://github.com/AshuNewatia)** | Collaborative workspace syncing team tasks directly with GitHub workflows. | `React` `Node.js` `MongoDB` `Socket.IO` |
+| **[Instibus](https://github.com/AshuNewatia)** | Campus transit application with dynamic weekly schedules and trip booking. | `Next.js` `PostgreSQL` |
+| **[Live Voice Agent](https://github.com/AshuNewatia/Live-Voice-Agent)** | Real-time conversational AI assistant with low-latency spoken I/O. | `TypeScript` `LiveKit` `Speech AI` |
+| **Campus Portals** | Immersive web experiences for TEDx, GDG, and the Science & Tech Council. | `React` `Next.js` `Three.js` |
 
-<!-- Replace project titles above with links to the exact public repositories you want to feature. -->
+---
 
-[Browse my repositories →](https://github.com/AshuNewatia?tab=repositories)
+### 📊 GitHub Telemetry
 
-### What interests me next
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AshuNewatia&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8" alt="Ashu's GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AshuNewatia&theme=tokyonight&hide_border=true&background=0D1117&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8" alt="Ashu's GitHub Streak" width="48%" />
+</div>
 
-Making AI assistants more useful, building better experiences for campus communities, and getting stronger at problem solving.
+<br>
 
 <details>
-<summary><b>Away from the editor</b></summary>
-<br />
-
-Anime, chess puzzles, quizzes, and the occasional rabbit hole in physics or mathematics.
-
+<summary><b><code>cat /home/ashu/idle_processes.txt</code></b></summary>
+<br>
+When I'm away from the editor, my runtime includes:
+<ul>
+  <li>♟️ <b>Strategy:</b> Chess puzzles and competitive quizzes.</li>
+  <li>🌌 <b>Theory:</b> Falling down rabbit holes in Physics and Mathematics.</li>
+  <li>⛩️ <b>Media:</b> Watching Anime.</li>
+</ul>
 </details>
 
 ---
 
 <div align="center">
 
-**Have an interesting idea? Let's build something useful.**
+### 📡 Establish Connection
 
-[GitHub](https://github.com/AshuNewatia)
+**Have an interesting idea? Let's compile it into reality.**
 
-<!-- Add your verified LinkedIn, portfolio, or public email links here. -->
+<a href="https://github.com/AshuNewatia"><img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=38BDF8" alt="GitHub" /></a>
+<!-- Uncomment and add your links below to activate them -->
+<!-- <a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=38BDF8" alt="LinkedIn" /></a> -->
+<!-- <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=38BDF8" alt="Email" /></a> -->
 
 </div>
