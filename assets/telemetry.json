@@ -1,13 +1,13 @@
 {
   "username": "AshuNewatia",
-  "fetched_at": "2026-11-07T20:59:25.774153+00:00",
+  "fetched_at": "2026-11-08T00:48:39.283408+00:00",
   "sources": {
     "profile_and_repositories": "GitHub REST API",
     "contributions": "GitHub GraphQL API"
   },
   "window": {
-    "from": "2025-11-08",
-    "to": "2026-11-07",
+    "from": "2025-11-09",
+    "to": "2026-11-08",
     "timezone": "UTC"
   },
   "metrics": {
@@ -61,11 +61,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2025-11-08",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-11-09",
       "level": 0,
@@ -1885,6 +1880,11 @@
       "date": "2026-11-07",
       "level": 3,
       "count": 17
+    },
+    {
+      "date": "2026-11-08",
+      "level": 0,
+      "count": 0
     }
   ]
 }
