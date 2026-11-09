@@ -1,189 +1,51 @@
+# Hi, I'm Ashu Newatia 👋
+
+### Full-Stack Web Developer | B.Tech CSE @ IIT Indore | Competitive Programmer
+
+I am a second-year Computer Science and Engineering undergraduate at the Indian Institute of Technology Indore and a Reliance Foundation Undergraduate Scholar. I focus on turning practical problems into useful software[cite: 1], specializing in real-time web applications, conversational AI, and robust algorithmic problem solving.
+
+## 🚀 About Me
+
+*   **Building:** Currently developing production-level campus marketplace applications and contributing as a frontend developer for the Career Advancement and Mentoring Centre (CAMC) web team at IIT Indore. 
+*   **Competing:** Actively solving algorithmic challenges in C++ with a peak rating of 1460 (Specialist) on Codeforces.
+*   **Community:** Member of The Quiz Club and volunteer for the Math Club, Programming Club, and Google Developer Student Club (GDSC) at IIT Indore.
+
+## 💻 Technology Stack
+
+*   **Languages:** C++, Python, JavaScript, TypeScript, HTML, CSS[cite: 1]
+*   **Frontend:** React.js, Next.js, Tailwind CSS, Three.js[cite: 1]
+*   **Backend & Databases:** Node.js, Express.js, MongoDB, PostgreSQL[cite: 1], MySQL, Prisma
+*   **Tools & Infrastructure:** Git, GitHub, VS Code[cite: 1], LiveKit, WebRTC, Socket.IO
+
+## 🛠️ Featured Projects
+
+### [CampusFlow](https://github.com/AshuNewatia/SoC)[cite: 1]
+*A real-time collaborative workspace meeting developer workflow.*[cite: 1]
+*   **Stack:** React, Node.js, MongoDB, Socket.IO, GitHub Integration[cite: 1]
+*   **Details:** Built bidirectional GitHub synchronization using Octokit. Secured 3rd place in the IITISoC '26 competition.
+
+### [Mission Impossible Spy Terminal (Voice Assistant)](https://github.com/AshuNewatia/Live-Voice-Agent)[cite: 1]
+*Real-time conversational AI exploring how voice makes software more natural.*[cite: 1]
+*   **Stack:** TypeScript, LiveKit, Speech AI[cite: 1], Deepgram, Google Gemma, Cartesia TTS
+*   **Details:** IMF-themed WebRTC voice agent featuring custom Ghost Protocol authorization modes.
+
+### [Instibus](https://github.com/AshuNewatia/Instibus)[cite: 1]
+*Bringing everyday college transport into a single experience with campus schedules and booking.*[cite: 1]
+*   **Stack:** Next.js, PostgreSQL[cite: 1]
+
+### Solo Leveling RPG Dashboard
+*   **Stack:** React, Tailwind CSS
+*   **Details:** Interactive web dashboard featuring custom quest management and dynamic level progression mechanics.
+
+## 📈 GitHub Activity
+
+<!-- Use standard GitHub readme stats for SEO-friendly text-based metrics instead of pure SVG images -->
 <div align="center">
-
-<!-- Animated header on top. Edit its text in scripts/generate_art.py. -->
-<img src="./assets/hero.svg" width="100%" alt="Ashu Newatia: Full Stack Developer, Voice AI Explorer, building at IIT Indore" />
-
-<br />
-
-<!-- Centered avatar at half the page width. Change width="50%" to resize. -->
-<img src="./assets/avatar.gif" width="50%" alt="Animated pixel-art cyberpunk desk" />
-
-<br /><br />
-
-...
-
-**Turning practical problems into useful software.**
-
-
-[Repositories ↗](https://github.com/AshuNewatia?tab=repositories) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
-
+  <img src="https://github-readme-stats.vercel.app/api?username=AshuNewatia&show_icons=true&theme=radical" alt="Ashu Newatia's GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AshuNewatia&theme=radical" alt="Ashu Newatia's GitHub Streak" />
 </div>
 
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
+## 📫 Connect with Me
 
-<!-- EDIT: interests and focus areas. -->
-### `01 / DEVELOPER SIGNAL`
-
-> **Build with purpose.** Understand the problem. Build. Test. Iterate.
->
-> **Explore with curiosity.** Voice AI, real-time collaboration, and quantum computing.
->
-> **Strengthen the foundations.** Data structures, algorithms, and problem solving in C++.
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
-
-### `02 / TECHNOLOGY STACK`
-
-<!-- EDIT: lists below. Update the icon URL too if you change a list. -->
-**Languages** — C++, Python, JavaScript, TypeScript, HTML, CSS
-
-<img src="https://skillicons.dev/icons?i=cpp,python,js,ts,html,css&amp;theme=dark&amp;perline=6" alt="Language icons" />
-
-**Frontend** — React, Next.js, Tailwind CSS, Three.js
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,threejs&amp;theme=dark&amp;perline=4" alt="Frontend technology icons" />
-
-**Backend & tools** — Node.js, Express, MongoDB, PostgreSQL, Git, GitHub, VS Code
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,git,github,vscode&amp;theme=dark&amp;perline=7" alt="Backend and developer tool icons" />
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
-
-### `03 / GITHUB TELEMETRY`
-
-<!-- GITHUB-TELEMETRY:START -->
-
-<div align="center">
-
-### ⚡ 442 contributions &nbsp; · &nbsp; 0-day streak &nbsp; · &nbsp; 5-day best
-
-**10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **3 followers**
-
-<br />
-
-**CONTRIBUTION SIGNAL**
-
-<img src="./assets/analytics.svg" width="100%" alt="Animated circuit scanner with actual weekly contribution totals above a daily contribution calendar. The scanner is decorative; the data is fetched from GitHub." />
-
-<sub>2025-11-10 → 2026-11-09 · 68 active days · 5 original repos · 5 forks</sub>
-
-<br /><br />
-
-**LANGUAGE FREQUENCIES**
-
-<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />
-
-🔵 **JavaScript 50%** · 2 repos &nbsp; / &nbsp; 🟣 **Python 25%** · 1 repo &nbsp; / &nbsp; 🟢 **TypeScript 25%** · 1 repo
-
-<br /><br />
-
-**RECENTLY ACTIVE REPOSITORIES**
-
-| Repository | About | Language | ★ | Last push |
-| --- | --- | --- | ---: | --- |
-| [Live-Voice-Agent](https://github.com/AshuNewatia/Live-Voice-Agent) | — | TypeScript | 0 | 2026-10-25 |
-| [SoC](https://github.com/AshuNewatia/SoC) | — | JavaScript | 0 | 2026-08-22 |
-| [MyTestRepo](https://github.com/AshuNewatia/MyTestRepo) | — | — | 0 | 2026-06-22 |
-| [gdgps-2](https://github.com/AshuNewatia/gdgps-2) | — | JavaScript | 0 | 2026-01-28 |
-
-<br /><br />
-
-<sub>Fetched from GitHub · 2026-11-09 01:02 UTC · Hourly refresh</sub>
-
-</div>
-
-<details>
-<summary><sub>Signal definitions, sources & refresh</sub></summary>
-
-The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.
-
-Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.
-
-Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right. The repository table lists your five most recently pushed original public repositories (this profile repository excluded).
-
-Sources: GitHub REST API + GitHub GraphQL API. Timestamped hourly snapshots; no fetch runs on profile visits.
-
-[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/AshuNewatia/AshuNewatia/actions/workflows/profile-analytics.yml)
-
-</details>
-
-<!-- GITHUB-TELEMETRY:END -->
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
-
-### `04 / CONNECTED BUILDS`
-
-**One connected set of ideas. Open a project to explore.**
-
-<!-- PROJECT NODE: copy one entire <details> block to add another project. -->
-<details open>
-<summary><b>◉ CampusFlow</b> — team collaboration</summary>
-
-### CampusFlow
-
-Team collaboration meets developer workflow. A collaborative workspace connecting team tasks with GitHub activity.
-
-**Technologies:** `React` · `Node.js` · `MongoDB` · `Socket.IO` · `GitHub integration`
-
-[View repository ↗](https://github.com/AshuNewatia/SoC)
-
-<!-- Add the exact project repository or demo link here when ready. -->
-
-</details>
-
-<details>
-<summary><b>◉ Voice Assistant</b> — conversational AI</summary>
-
-### Voice Assistant
-
-Real-time conversations and spoken responses. Exploring how voice can make software more natural to use.
-
-**Technologies:** `TypeScript` · `LiveKit` · `Speech AI`
-
-[View repository ↗](https://github.com/AshuNewatia/Live-Voice-Agent)
-
-</details>
-
-<details>
-<summary><b>◉ Instibus</b> — campus mobility</summary>
-
-### Instibus
-
-Campus schedules, trip requests, and booking. Bringing everyday college transport into a single experience.
-
-**Technologies:** `Next.js` · `PostgreSQL`
-
-[View repository ↗](https://github.com/AshuNewatia/Instibus)
-
-<!-- Add the exact project repository or demo link here when ready. -->
-
-</details>
-
-<details>
-<summary><b>◉ Campus Web</b> — creative interfaces</summary>
-
-### Campus Web
-
-Web experiences for TEDx, GDG, and the Science & Technology Council at IIT Indore.
-
-**Technologies:** `React` · `Next.js` · `Three.js`
-
-<!-- Add the exact project repository or demo links here when ready. -->
-
-</details>
-
-<br />
-
-[Browse all repositories ↗](https://github.com/AshuNewatia?tab=repositories)
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
-
-<div align="center">
-
-### Good ideas deserve to be built.
-
-**Let's make the next one useful.**
-
-[GitHub ↗](https://github.com/AshuNewatia) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
-
-</div>
+*   **LinkedIn:** [linkedin.com/in/ashunewatia23](https://www.linkedin.com/in/ashunewatia23/)[cite: 1]
+*   **GitHub:** [AshuNewatia](https://github.com/AshuNewatia)[cite: 1]
