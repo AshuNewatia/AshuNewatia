@@ -17,7 +17,6 @@
 <path d="M54 79H70L78 63L90 96L102 70L110 79H126" stroke="#67E8F9" stroke-width="2"/>
 <path d="M138 79H162L185 124H210" stroke="#345269"/>
 <circle class="motion" r="2.5" fill="#67E8F9"><animateMotion path="M138 79H162L185 124H210" dur="3s" repeatCount="indefinite"/></circle>
-<rect x="28" y="184" width="13" height="13" rx="2" fill="#152337"/>
 <rect x="28" y="202" width="13" height="13" rx="2" fill="#152337"/>
 <rect x="28" y="220" width="13" height="13" rx="2" fill="#152337"/>
 <rect x="28" y="238" width="13" height="13" rx="2" fill="#152337"/>
@@ -382,6 +381,7 @@
 <rect x="946" y="274" width="13" height="13" rx="2" fill="#152337"/>
 <rect x="946" y="292" width="13" height="13" rx="2" fill="#23BFCC"/>
 <rect x="964" y="184" width="13" height="13" rx="2" fill="#152337"/>
+<rect x="964" y="202" width="13" height="13" rx="2" fill="#152337"/>
 <clipPath id="matrix"><rect x="24" y="176" width="960" height="139"/></clipPath>
 <g clip-path="url(#matrix)"><rect class="motion" x="-70" y="177" width="70" height="138" fill="url(#scan)"><animate attributeName="x" values="-70;1000" dur="10s" repeatCount="indefinite"/></rect></g>
 <path d="M24 334H420L434 324H566L580 334H976" stroke="#263849"/>
