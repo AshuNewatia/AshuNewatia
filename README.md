@@ -1,7 +1,6 @@
 <div align="center">
 
-# Hi, I'm Ashu Newatia 👋
-**Full-Stack Web Developer | B.Tech CSE @ IIT Indore | Voice AI Explorer**
+<img src="./assets/header.svg" width="750" alt="Ashu Newatia — animated roles" />
 
 <br />
 
@@ -65,27 +64,6 @@
 <sub>2025-11-11 → 2026-11-10 · 70 active days · 5 original repos · 5 forks</sub>
 
 <br /><br />
-
-**LANGUAGE FREQUENCIES**
-
-<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />
-
-🔵 **JavaScript 50%** · 2 repos &nbsp; / &nbsp; 🟣 **Python 25%** · 1 repo &nbsp; / &nbsp; 🟢 **TypeScript 25%** · 1 repo
-
-<br /><br />
-
-**RECENTLY ACTIVE REPOSITORIES**
-
-| Repository | About | Language | ★ | Last push |
-| --- | --- | --- | ---: | --- |
-| [Live-Voice-Agent](https://github.com/AshuNewatia/Live-Voice-Agent) | — | TypeScript | 0 | 2026-10-25 |
-| [SoC](https://github.com/AshuNewatia/SoC) | — | JavaScript | 0 | 2026-08-22 |
-| [MyTestRepo](https://github.com/AshuNewatia/MyTestRepo) | — | — | 0 | 2026-06-22 |
-| [gdgps-2](https://github.com/AshuNewatia/gdgps-2) | — | JavaScript | 0 | 2026-01-28 |
-
-<br /><br />
-
-<sub>Fetched from GitHub · 2026-11-10 02:18 UTC · Hourly refresh</sub>
 
 </div>
 
@@ -181,6 +159,6 @@ Web experiences for TEDx, GDG, and the Science & Technology Council at IIT Indor
 
 **Let's make the next one useful.**
 
-[GitHub ↗](https://github.com/AshuNewatia) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
+[LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
 
 </div>
