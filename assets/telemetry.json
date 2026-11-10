@@ -1,25 +1,25 @@
 {
   "username": "AshuNewatia",
-  "fetched_at": "2026-11-09T18:57:00.198341+00:00",
+  "fetched_at": "2026-11-10T02:18:30.208551+00:00",
   "sources": {
     "profile_and_repositories": "GitHub REST API",
     "contributions": "GitHub GraphQL API"
   },
   "window": {
-    "from": "2025-11-10",
-    "to": "2026-11-09",
+    "from": "2025-11-11",
+    "to": "2026-11-10",
     "timezone": "UTC"
   },
   "metrics": {
-    "contributions": 450,
-    "current_streak_days": 1,
+    "contributions": 456,
+    "current_streak_days": 2,
     "best_streak_days": 5,
     "public_repositories": 10,
     "original_repositories": 5,
     "forked_repositories": 5,
     "stars_on_original_repositories": 0,
     "followers": 3,
-    "active_days": 69
+    "active_days": 70
   },
   "languages_by_primary_repository_count": {
     "JavaScript": 2,
@@ -61,11 +61,6 @@
     }
   ],
   "calendar": [
-    {
-      "date": "2025-11-10",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-11-11",
       "level": 0,
@@ -1884,7 +1879,12 @@
     {
       "date": "2026-11-09",
       "level": 2,
-      "count": 8
+      "count": 12
+    },
+    {
+      "date": "2026-11-10",
+      "level": 1,
+      "count": 2
     }
   ]
 }
