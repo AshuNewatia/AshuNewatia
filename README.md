@@ -65,27 +65,6 @@
 
 <br /><br />
 
-**LANGUAGE FREQUENCIES**
-
-<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />
-
-🔵 **JavaScript 50%** · 2 repos &nbsp; / &nbsp; 🟣 **Python 25%** · 1 repo &nbsp; / &nbsp; 🟢 **TypeScript 25%** · 1 repo
-
-<br /><br />
-
-**RECENTLY ACTIVE REPOSITORIES**
-
-| Repository | About | Language | ★ | Last push |
-| --- | --- | --- | ---: | --- |
-| [Live-Voice-Agent](https://github.com/AshuNewatia/Live-Voice-Agent) | — | TypeScript | 0 | 2026-10-25 |
-| [SoC](https://github.com/AshuNewatia/SoC) | — | JavaScript | 0 | 2026-08-22 |
-| [MyTestRepo](https://github.com/AshuNewatia/MyTestRepo) | — | — | 0 | 2026-06-22 |
-| [gdgps-2](https://github.com/AshuNewatia/gdgps-2) | — | JavaScript | 0 | 2026-01-28 |
-
-<br /><br />
-
-<sub>Fetched from GitHub · 2026-11-10 08:41 UTC · Hourly refresh</sub>
-
 </div>
 
 <details>
