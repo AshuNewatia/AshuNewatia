@@ -1,6 +1,6 @@
 {
   "username": "AshuNewatia",
-  "fetched_at": "2026-11-14T14:21:12.791741+00:00",
+  "fetched_at": "2026-11-14T19:21:33.128361+00:00",
   "sources": {
     "profile_and_repositories": "GitHub REST API",
     "contributions": "GitHub GraphQL API"
@@ -18,7 +18,7 @@
     "original_repositories": 5,
     "forked_repositories": 5,
     "stars_on_original_repositories": 0,
-    "followers": 3,
+    "followers": 4,
     "active_days": 72
   },
   "languages_by_primary_repository_count": {
