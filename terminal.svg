@@ -1,179 +1,131 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="1100"
-  height="850"
-  viewBox="0 0 1100 850"
+  height="350"
+  viewBox="0 0 1100 350"
   role="img"
-  aria-labelledby="profile-title profile-description"
+  aria-labelledby="title desc"
 >
-  <title id="profile-title">
-    Ashu Newatia — Cyberpunk GitHub Profile
-  </title>
+  <title id="title">Ashu Newatia — profile terminal</title>
 
-  <desc id="profile-description">
-    Animated terminal introducing Ashu Newatia, roles, skills, and projects.
+  <desc id="desc">
+    Animated terminal with profile and positions.
   </desc>
 
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#030907" />
-      <stop offset="55%" stop-color="#010303" />
-      <stop offset="100%" stop-color="#090309" />
-    </linearGradient>
-
-    <linearGradient id="scanline-gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0" />
-      <stop offset="50%" stop-color="#00ffcc" stop-opacity="0.13" />
-      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0" />
+    <linearGradient id="scan" x2="0" y2="1">
+      <stop stop-color="#00ffcc" stop-opacity="0" />
+      <stop offset=".5" stop-color="#00ffcc" stop-opacity=".12" />
+      <stop offset="1" stop-color="#00ffcc" stop-opacity="0" />
     </linearGradient>
 
     <pattern
-      id="crt-pattern"
+      id="crt"
       width="4"
       height="4"
       patternUnits="userSpaceOnUse"
     >
-      <rect width="4" height="2" fill="#000000" opacity="0.18" />
+      <rect
+        width="4"
+        height="2"
+        fill="#000"
+        opacity=".20"
+      />
     </pattern>
 
-    <clipPath id="screen-clip">
-      <rect x="17" y="17" width="1066" height="816" rx="14" />
+    <clipPath id="screen">
+      <rect
+        x="8"
+        y="8"
+        width="1084"
+        height="334"
+        rx="12"
+      />
     </clipPath>
 
-    <filter id="cyan-glow" x="-40%" y="-100%" width="180%" height="300%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <filter
+      id="glow"
+      x="-50%"
+      y="-100%"
+      width="200%"
+      height="300%"
+    >
+      <feGaussianBlur stdDeviation="2" result="b" />
 
-    <filter id="pink-glow" x="-40%" y="-100%" width="180%" height="300%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
       <feMerge>
-        <feMergeNode in="blur" />
+        <feMergeNode in="b" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+    @import url(
+      'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap'
+    );
 
-    .terminal {
-      font-family: "Fira Code", "Courier New", monospace;
+    text {
+      font-family: 'Fira Code', 'Courier New', monospace;
     }
 
     .name {
-      font-size: 46px;
-      font-weight: 700;
       fill: #00ffcc;
-      filter: url(#cyan-glow);
-      animation: name-glitch 7s infinite;
-    }
-
-    .name-pink {
-      font-size: 46px;
+      font-size: 38px;
       font-weight: 700;
-      fill: #ff0055;
-      opacity: 0;
-      animation: glitch-pink 7s infinite;
+      filter: url(#glow);
+      animation: glitch 7s infinite;
     }
 
-    .name-green {
-      font-size: 46px;
+    .head {
+      font-size: 13px;
+      fill: #6ec5a4;
+    }
+
+    .pink {
+      fill: #ff3377;
       font-weight: 700;
-      fill: #00ff00;
-      opacity: 0;
-      animation: glitch-green 7s infinite;
     }
 
-    .subtitle {
-      font-size: 15px;
-      font-weight: 600;
-      fill: #ff0055;
-      filter: url(#pink-glow);
-      letter-spacing: 1px;
+    .green {
+      fill: #00ff77;
     }
 
-    .tiny {
-      font-size: 12px;
-      fill: #66aa95;
+    .muted {
+      fill: #b6d6ca;
+    }
+
+    .terminal {
+      font-size: 17px;
     }
 
     .line {
-      font-size: 15px;
-      opacity: 0;
-      animation-name: line-reveal;
-      animation-duration: 0.35s;
-      animation-fill-mode: forwards;
+      opacity: 1;
+      animation: appear .3s both;
     }
 
-    .line-1  { animation-delay: 0.4s; }
-    .line-2  { animation-delay: 0.8s; }
-    .line-3  { animation-delay: 1.2s; }
-    .line-4  { animation-delay: 1.6s; }
-    .line-5  { animation-delay: 2.0s; }
-    .line-6  { animation-delay: 2.4s; }
-    .line-7  { animation-delay: 2.8s; }
-    .line-8  { animation-delay: 3.2s; }
-    .line-9  { animation-delay: 3.6s; }
-    .line-10 { animation-delay: 4.0s; }
-    .line-11 { animation-delay: 4.4s; }
-    .line-12 { animation-delay: 4.8s; }
-    .line-13 { animation-delay: 5.2s; }
-    .line-14 { animation-delay: 5.6s; }
-    .line-15 { animation-delay: 6.0s; }
-    .line-16 { animation-delay: 6.4s; }
+    .l1 { animation-delay: .3s; }
+    .l2 { animation-delay: .8s; }
+    .l3 { animation-delay: 1.3s; }
+    .l4 { animation-delay: 1.8s; }
+    .l5 { animation-delay: 2.3s; }
+    .l6 { animation-delay: 2.8s; }
 
-    .prompt {
-      fill: #ff0055;
-      font-weight: 700;
-    }
-
-    .command {
-      fill: #00ffcc;
-      font-weight: 600;
-    }
-
-    .output {
-      fill: #b5e7ce;
-    }
-
-    .role {
-      fill: #00ff00;
-    }
-
-    .project-name {
-      fill: #ff6b9b;
-      font-weight: 700;
-    }
-
-    .project-highlight {
-      fill: #00ffcc;
-    }
-
-    .scanline {
-      animation: scan-down 5s linear infinite;
+    .scan {
+      animation: scan 5s linear infinite;
     }
 
     .cursor {
-      fill: #00ff00;
-      opacity: 0;
-      animation:
-        cursor-appear 0.1s 6.8s forwards,
-        cursor-blink 1s 6.8s step-end infinite;
+      animation: blink 1s step-end infinite;
     }
 
-    .status-dot {
-      fill: #00ff00;
-      animation: status-pulse 2s ease-in-out infinite;
+    .dot {
+      animation: pulse 2s ease-in-out infinite;
     }
 
-    @keyframes line-reveal {
+    @keyframes appear {
       from {
         opacity: 0;
-        transform: translateX(-10px);
+        transform: translateX(-8px);
       }
 
       to {
@@ -182,289 +134,182 @@
       }
     }
 
-    @keyframes scan-down {
+    @keyframes scan {
       from {
-        transform: translateY(-120px);
+        transform: translateY(-100px);
       }
 
       to {
-        transform: translateY(900px);
+        transform: translateY(450px);
       }
     }
 
-    @keyframes cursor-appear {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes cursor-blink {
-      0%, 49% {
-        opacity: 1;
-      }
-
-      50%, 100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes status-pulse {
-      0%, 100% {
-        opacity: 0.4;
-      }
-
+    @keyframes blink {
       50% {
-        opacity: 1;
+        opacity: 0;
       }
     }
 
-    @keyframes name-glitch {
-      0%, 91%, 96%, 100% {
-        transform: translateX(0);
+    @keyframes pulse {
+      50% {
+        opacity: .3;
       }
+    }
 
-      92% {
-        transform: translateX(-2px);
+    @keyframes glitch {
+      0%, 92%, 96%, 100% {
+        transform: translateX(0);
       }
 
       93% {
-        transform: translateX(2px);
+        transform: translateX(-2px);
       }
 
       94% {
+        transform: translateX(2px);
+      }
+
+      95% {
         transform: translateX(-1px);
       }
     }
 
-    @keyframes glitch-pink {
-      0%, 90%, 96%, 100% {
-        opacity: 0;
-        transform: translateX(0);
-      }
-
-      91%, 93% {
-        opacity: 0.5;
-        transform: translateX(-3px);
-      }
-    }
-
-    @keyframes glitch-green {
-      0%, 90%, 96%, 100% {
-        opacity: 0;
-        transform: translateX(0);
-      }
-
-      92%, 94% {
-        opacity: 0.45;
-        transform: translateX(3px);
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      .line,
-      .cursor {
-        animation: none;
+      .line {
         opacity: 1;
+        animation: none;
       }
 
       .name,
-      .status-dot {
+      .dot,
+      .cursor {
         animation: none;
       }
 
-      .name-pink,
-      .name-green,
-      .scanline {
+      .scan {
         display: none;
-        animation: none;
       }
     }
   </style>
 
-  <rect width="1100" height="850" rx="18" fill="#000000" />
-
   <rect
-    x="16"
-    y="16"
-    width="1068"
-    height="818"
-    rx="15"
-    fill="url(#background)"
-    stroke="#00ffcc"
-    stroke-opacity="0.65"
-    stroke-width="2"
+    width="1100"
+    height="350"
+    rx="16"
+    fill="#000"
   />
 
-  <g clip-path="url(#screen-clip)">
+  <rect
+    x="8"
+    y="8"
+    width="1084"
+    height="334"
+    rx="12"
+    fill="#030907"
+    stroke="#00ffcc"
+    stroke-opacity=".75"
+  />
+
+  <g clip-path="url(#screen)">
     <!-- Terminal title bar -->
 
-    <rect x="17" y="17" width="1066" height="45" fill="#07120e" />
-
-    <line
-      x1="17"
-      y1="62"
-      x2="1083"
-      y2="62"
-      stroke="#00ffcc"
-      stroke-opacity="0.35"
+    <rect
+      x="8"
+      y="8"
+      width="1084"
+      height="38"
+      fill="#071c17"
     />
 
-    <circle cx="40" cy="39" r="5" fill="#ff0055" />
-    <circle cx="59" cy="39" r="5" fill="#ffae42" />
-    <circle cx="78" cy="39" r="5" fill="#00ff00" />
+    <circle cx="31" cy="27" r="5" fill="#ff0055" />
+    <circle cx="49" cy="27" r="5" fill="#ffb45b" />
+    <circle cx="67" cy="27" r="5" fill="#00ff77" />
+
+    <text x="91" y="32" class="head">
+      ASHU@IIT-INDORE:~ / PROFILE
+    </text>
+
+    <circle
+      cx="993"
+      cy="27"
+      r="4"
+      fill="#00ff77"
+      class="dot"
+    />
+
+    <text x="1005" y="32" class="head">
+      ONLINE
+    </text>
+
+    <!-- Identity -->
+
+    <text x="35" y="101" class="name">
+      Ashu Newatia
+    </text>
+
+    <text x="37" y="127" class="head pink">
+      &gt;&gt; B.TECH CSE / IIT INDORE
+    </text>
+
+    <line
+      x1="36"
+      y1="145"
+      x2="1064"
+      y2="145"
+      stroke="#00ffcc"
+      stroke-opacity=".25"
+    />
+
+    <!-- Terminal output -->
 
     <g class="terminal">
-      <text x="105" y="44" class="tiny">
-        ASHU@IIT-INDORE:~ / PROFILE TERMINAL
+      <text x="38" y="178" class="line l1">
+        <tspan class="pink">ashu@iit:~$ </tspan>
+        <tspan fill="#00ffcc">whoami</tspan>
       </text>
 
-      <circle cx="965" cy="39" r="4" class="status-dot" />
-
-      <text x="978" y="44" class="tiny">
-        ONLINE
+      <text x="38" y="204" class="line l2 muted">
+        Building real-time products and intelligent interfaces.
       </text>
 
-      <!-- Name and title -->
-
-      <text x="50" y="118" class="name-pink">Ashu Newatia</text>
-      <text x="50" y="118" class="name-green">Ashu Newatia</text>
-      <text x="50" y="118" class="name">Ashu Newatia</text>
-
-      <text x="52" y="148" class="subtitle">
-        &gt;&gt; B.TECH CSE @ IIT INDORE
+      <text x="38" y="238" class="line l3">
+        <tspan class="pink">ashu@iit:~$ </tspan>
+        <tspan fill="#00ffcc">cat roles.txt</tspan>
       </text>
 
-      <line
-        x1="50"
-        y1="168"
-        x2="1050"
-        y2="168"
-        stroke="#00ffcc"
-        stroke-opacity="0.25"
-      />
-
-      <!-- Bio -->
-
-      <text x="52" y="200" class="line line-1">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-        <tspan class="command">whoami</tspan>
+      <text x="38" y="264" class="line l4 green">
+        [01] WEB DEV DOMAIN LEAD / GDG IIT INDORE
       </text>
 
-      <text x="52" y="227" class="line line-2 output">
-        Building real-time products, intelligent interfaces and useful systems.
+      <text x="38" y="289" class="line l5 green">
+        [02] COORDINATOR / CSESA
       </text>
 
-      <!-- Roles -->
-
-      <text x="52" y="266" class="line line-3">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-        <tspan class="command">cat roles.txt</tspan>
-      </text>
-
-      <text x="52" y="293" class="line line-4 role">
-        [01] DOMAIN LEAD — WEB DEVELOPMENT, GDG IIT INDORE
-      </text>
-
-      <text x="52" y="318" class="line line-5 role">
-        [02] COORDINATOR — CSESA, IIT INDORE
-      </text>
-
-      <text x="52" y="343" class="line line-6 role">
-        [03] CODEFORCES EXPERT — MAX RATING 1630
-      </text>
-
-      <!-- Technologies -->
-
-      <text x="52" y="382" class="line line-7">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-        <tspan class="command">cat tech_stack.txt</tspan>
-      </text>
-
-      <text x="52" y="409" class="line line-8 output">
-        C++  /  TypeScript  /  Python  /  Next.js  /  Node.js
-      </text>
-
-      <text x="52" y="434" class="line line-9 output">
-        MongoDB  /  PostgreSQL  /  LiveKit WebRTC  /  Socket.IO
-      </text>
-
-      <!-- Projects -->
-
-      <text x="52" y="473" class="line line-10">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-        <tspan class="command">ls ./projects --featured</tspan>
-      </text>
-
-      <text x="52" y="506" class="line line-11">
-        <tspan class="project-name">[CAMPUSFLOW]</tspan>
-        <tspan class="project-highlight"> IITISoC&#x27;26 — 3RD PLACE</tspan>
-      </text>
-
-      <text x="52" y="530" class="line line-11 output">
-        Real-time workspace with two-way GitHub issue sync.
-      </text>
-
-      <text x="52" y="567" class="line line-12">
-        <tspan class="project-name">[IMF TACTICAL VOICE AGENT]</tspan>
-        <tspan class="project-highlight"> REAL-TIME VOICE TERMINAL</tspan>
-      </text>
-
-      <text x="52" y="591" class="line line-12 output">
-        LiveKit, Deepgram, Gemma-4 and Cartesia voice AI.
-      </text>
-
-      <text x="52" y="628" class="line line-13">
-        <tspan class="project-name">[INSTIBUS]</tspan>
-        <tspan class="project-highlight"> CAMPUS TRANSPORT SYSTEM</tspan>
-      </text>
-
-      <text x="52" y="652" class="line line-13 output">
-        Campus transit, bookings and aggregate seat availability.
-      </text>
-
-      <!-- Contact -->
-
-      <text x="52" y="699" class="line line-14">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-        <tspan class="command">cat contact.txt</tspan>
-      </text>
-
-      <text x="52" y="727" class="line line-15 output">
-        github.com/AshuNewatia
-      </text>
-
-      <text x="52" y="770" class="line line-16">
-        <tspan class="prompt">ashu@iit:~$ </tspan>
-      </text>
-
-      <rect x="170" y="754" width="10" height="19" class="cursor" />
-
-      <text x="1050" y="805" text-anchor="end" class="tiny">
-        SYSTEM / BUILD · LEARN · ITERATE
+      <text x="38" y="314" class="line l6 green">
+        [03] CODEFORCES EXPERT / MAX 1630
+        <tspan class="cursor">▉</tspan>
       </text>
     </g>
 
     <!-- CRT texture -->
 
     <rect
-      x="17"
-      y="17"
-      width="1066"
-      height="816"
-      fill="url(#crt-pattern)"
-      pointer-events="none"
+      x="8"
+      y="8"
+      width="1084"
+      height="334"
+      fill="url(#crt)"
     />
 
     <!-- Moving scanline -->
 
     <rect
-      x="17"
+      x="8"
       y="0"
-      width="1066"
+      width="1084"
       height="100"
-      fill="url(#scanline-gradient)"
-      class="scanline"
-      pointer-events="none"
+      fill="url(#scan)"
+      class="scan"
     />
   </g>
 </svg>

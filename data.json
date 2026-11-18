@@ -1,39 +1,57 @@
 {
   "name": "Ashu Newatia",
-  "title": "B.TECH CSE @ IIT INDORE",
-  "bio": "Building real-time products, intelligent interfaces and useful systems.",
+  "title": "B.TECH CSE / IIT INDORE",
+  "bio": "Building real-time products and intelligent interfaces.",
   "roles": [
-    "DOMAIN LEAD — WEB DEVELOPMENT, GDG IIT INDORE",
-    "COORDINATOR — CSESA, IIT INDORE",
-    "CODEFORCES EXPERT — MAX RATING 1630"
+    "WEB DEV DOMAIN LEAD / GDG IIT INDORE",
+    "COORDINATOR / CSESA",
+    "CODEFORCES EXPERT / MAX 1630"
   ],
-  "tech_stack": [
-    "C++",
-    "TypeScript",
-    "Python",
-    "Next.js",
-    "Node.js",
-    "MongoDB",
-    "PostgreSQL",
-    "LiveKit WebRTC",
-    "Socket.IO"
-  ],
+  "stack": {
+    "LANGUAGES": [
+      "C++",
+      "TypeScript",
+      "Python",
+      "JavaScript"
+    ],
+    "WEB": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "REAL-TIME": [
+      "LiveKit",
+      "WebRTC",
+      "Socket.IO",
+      "Deepgram",
+      "Cartesia"
+    ]
+  },
   "projects": [
     {
       "name": "CAMPUSFLOW",
-      "description": "Real-time workspace with two-way GitHub issue sync.",
-      "highlight": "IITISoC'26 — 3RD PLACE"
+      "summary": "Real-time collaboration with two-way GitHub issue sync.",
+      "tag": "IITISoC '26 · 3rd place",
+      "tech": "MERN / Socket.IO / Octokit",
+      "url": "https://github.com/AshuNewatia/SoC"
     },
     {
-      "name": "IMF TACTICAL VOICE AGENT",
-      "description": "LiveKit, Deepgram, Gemma-4 and Cartesia voice AI.",
-      "highlight": "REAL-TIME VOICE TERMINAL"
+      "name": "VOICE AGENT",
+      "summary": "A real-time AI voice terminal for natural conversations.",
+      "tag": "VOICE AI",
+      "tech": "LiveKit / Deepgram / Gemma-4 / Cartesia",
+      "url": "https://github.com/AshuNewatia/Live-Voice-Agent"
     },
     {
       "name": "INSTIBUS",
-      "description": "Campus transit, bookings and aggregate seat availability.",
-      "highlight": "CAMPUS TRANSPORT SYSTEM"
+      "summary": "Campus transit, trip bookings and seat availability.",
+      "tag": "CAMPUS TRANSPORT",
+      "tech": "Next.js / PostgreSQL",
+      "url": "https://github.com/AshuNewatia/Instibus"
     }
   ],
-  "contact": "github.com/AshuNewatia"
+  "linkedin": "https://www.linkedin.com/in/ashunewatia23/",
+  "github": "https://github.com/AshuNewatia"
 }

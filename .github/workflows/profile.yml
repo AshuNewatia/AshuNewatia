@@ -1,0 +1,61 @@
+name: Update cyberpunk profile
+
+on:
+  push:
+    paths:
+      - data.json
+      - terminal.template.svg
+      - generate_terminal.py
+      - scripts/update_analytics.py
+      - .github/workflows/profile.yml
+
+  schedule:
+    - cron: "23 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate profile
+        run: python generate_terminal.py
+
+      - name: Refresh GitHub activity
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/update_analytics.py
+
+      - name: Commit updated profile
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md terminal.svg
+
+          if git diff --cached --quiet; then
+            echo "No profile changes."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh cyberpunk profile"
+          git pull --rebase
+          git push

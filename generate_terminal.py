@@ -4,125 +4,224 @@ import xml.etree.ElementTree as ET
 
 from html import escape
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parent
 
-DATA_FILE = ROOT / "data.json"
-TEMPLATE_FILE = ROOT / "terminal.template.svg"
-OUTPUT_FILE = ROOT / "terminal.svg"
+START = "<!-- GITHUB-TELEMETRY:START -->"
+END = "<!-- GITHUB-TELEMETRY:END -->"
 
 
-def escape_svg_text(value):
-    return escape(str(value), quote=True)
+def safe_url(value):
+    parsed = urlparse(value)
 
+    if (
+        parsed.scheme != "https"
+        or not parsed.netloc
+        or re.search(r"[\s<>()]", value)
+    ):
+        raise ValueError("Links must be valid HTTPS URLs")
 
-def validate_data(data):
-    required_fields = [
-        "name",
-        "title",
-        "bio",
-        "roles",
-        "tech_stack",
-        "projects",
-        "contact",
-    ]
-
-    for field in required_fields:
-        if field not in data:
-            raise ValueError(f"Missing required field: {field}")
-
-    if not isinstance(data["roles"], list) or len(data["roles"]) != 3:
-        raise ValueError("roles must contain exactly three entries.")
-
-    if not isinstance(data["projects"], list) or len(data["projects"]) != 3:
-        raise ValueError("projects must contain exactly three entries.")
-
-    if not isinstance(data["tech_stack"], list) or not data["tech_stack"]:
-        raise ValueError("tech_stack must be a non-empty list.")
-
-    for index, project in enumerate(data["projects"], start=1):
-        for field in ["name", "description", "highlight"]:
-            if field not in project:
-                raise ValueError(
-                    f"Project {index} is missing required field: {field}"
-                )
-
-
-def split_tech_stack(tech_stack):
-    midpoint = (len(tech_stack) + 1) // 2
-
-    first_half = tech_stack[:midpoint]
-    second_half = tech_stack[midpoint:]
-
-    first_line = "  /  ".join(str(item) for item in first_half)
-    second_line = "  /  ".join(str(item) for item in second_half)
-
-    return first_line, second_line
-
-
-def build_replacements(data):
-    stack_1, stack_2 = split_tech_stack(data["tech_stack"])
-
-    replacements = {
-        "NAME": data["name"],
-        "TITLE": data["title"],
-        "BIO": data["bio"],
-        "ROLE_1": data["roles"][0],
-        "ROLE_2": data["roles"][1],
-        "ROLE_3": data["roles"][2],
-        "TECH_STACK_1": stack_1,
-        "TECH_STACK_2": stack_2,
-        "CONTACT": data["contact"],
-    }
-
-    for index, project in enumerate(data["projects"], start=1):
-        replacements[f"PROJECT_{index}_NAME"] = project["name"]
-        replacements[f"PROJECT_{index}_DESCRIPTION"] = project["description"]
-        replacements[f"PROJECT_{index}_HIGHLIGHT"] = project["highlight"]
-
-    return replacements
+    return value
 
 
 def main():
-    if not DATA_FILE.exists():
-        raise FileNotFoundError(f"Could not find {DATA_FILE.name}")
+    data_file = ROOT / "data.json"
+    template_file = ROOT / "terminal.template.svg"
+    readme_path = ROOT / "README.md"
 
-    if not TEMPLATE_FILE.exists():
-        raise FileNotFoundError(f"Could not find {TEMPLATE_FILE.name}")
+    data = json.loads(
+        data_file.read_text(encoding="utf-8")
+    )
 
-    data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    roles = data["roles"]
 
-    validate_data(data)
+    if len(roles) != 3:
+        raise ValueError("Provide exactly three roles in data.json")
 
-    template = TEMPLATE_FILE.read_text(encoding="utf-8")
+    values = {
+        "NAME": data["name"],
+        "TITLE": data["title"],
+        "BIO": data["bio"],
+    }
 
-    replacements = build_replacements(data)
+    values.update({
+        f"ROLE_{index}": role
+        for index, role in enumerate(roles, start=1)
+    })
 
-    output = template
+    template = template_file.read_text(encoding="utf-8")
 
-    for key, value in replacements.items():
-        placeholder = "{{" + key + "}}"
+    rendered = re.sub(
+        r"{{([A-Z0-9_]+)}}",
+        lambda match: escape(
+            str(values[match.group(1)]),
+            quote=True,
+        ),
+        template,
+    )
 
-        output = output.replace(
-            placeholder,
-            escape_svg_text(value),
+    # Check that the generated SVG is valid XML.
+    ET.fromstring(rendered)
+
+    (ROOT / "terminal.svg").write_text(
+        rendered,
+        encoding="utf-8",
+    )
+
+    # Keep the most recent GitHub activity snapshot when the rest of
+    # the README is regenerated.
+    if readme_path.exists():
+        old_readme = readme_path.read_text(encoding="utf-8")
+    else:
+        old_readme = ""
+
+    if (
+        old_readme.count(START) == 1
+        and old_readme.count(END) == 1
+        and old_readme.index(START) < old_readme.index(END)
+    ):
+        activity = old_readme[
+            old_readme.index(START):
+            old_readme.index(END) + len(END)
+        ]
+    else:
+        activity = (
+            START
+            + "\n\n"
+            + "*Activity appears after the first successful refresh.*"
+            + "\n\n"
+            + END
         )
 
-    remaining = re.findall(r"{{\s*[A-Z0-9_]+\s*}}", output)
+    github = safe_url(data["github"])
+    linkedin = safe_url(data["linkedin"])
 
-    if remaining:
-        raise ValueError(
-            "Unreplaced placeholders found: "
-            + ", ".join(sorted(set(remaining)))
+    def html_text(value):
+        return escape(str(value), quote=True)
+
+    project_rows = []
+
+    for index, project in enumerate(data["projects"], start=1):
+        name = html_text(project["name"])
+        tag = html_text(project["tag"])
+        summary = html_text(project["summary"])
+        tech = html_text(project["tech"])
+        url = safe_url(project["url"])
+
+        project_rows.append(
+            f"""
+<tr>
+  <td>
+    <strong>{index:02} / {name}</strong><br />
+    <sub>{tag}</sub><br /><br />
+    {summary}<br /><br />
+    <code>{tech}</code><br /><br />
+    <a href="{url}">OPEN REPOSITORY ↗</a>
+  </td>
+</tr>
+""".strip()
         )
 
-    # Validate the generated document before writing it.
-    ET.fromstring(output)
+    stack_rows = []
 
-    OUTPUT_FILE.write_text(output, encoding="utf-8")
+    for category, technologies in data["stack"].items():
+        category_text = html_text(category)
 
-    print(f"Successfully generated {OUTPUT_FILE.name}")
+        technology_text = " · ".join(
+            f"`{html_text(item)}`"
+            for item in technologies
+        )
+
+        stack_rows.append(
+            f"| **{category_text}** | {technology_text} |"
+        )
+
+    project_table = "\n".join(project_rows)
+    stack_table = "\n".join(stack_rows)
+
+    name = html_text(data["name"])
+    bio = html_text(data["bio"])
+
+    readme = f"""<p align="center">
+  <img
+    src="./terminal.svg"
+    width="100%"
+    alt="{name}: animated cyberpunk terminal with roles and bio"
+  />
+</p>
+
+<p align="center">
+  <strong>
+    BUILD SYSTEMS &nbsp; / &nbsp;
+    SOLVE PROBLEMS &nbsp; / &nbsp;
+    KEEP EXPLORING
+  </strong>
+</p>
+
+<p align="center">
+  <a href="{github}?tab=repositories">[ REPOSITORIES ↗ ]</a>
+  &nbsp; ✦ &nbsp;
+  <a href="{linkedin}">[ LINKEDIN ↗ ]</a>
+</p>
+
+---
+
+## ◈ 01 / SYSTEM PROFILE
+
+{bio} I enjoy connecting collaborative software, campus tools and voice AI with practical problems.
+
+<p align="center">
+  <img
+    src="./assets/waneella.gif"
+    width="300"
+    alt="Animated pixel-art workspace"
+  />
+</p>
+
+## ◈ 02 / FEATURED MISSIONS
+
+<table width="100%">
+{project_table}
+</table>
+
+## ◈ 03 / THE TOOLKIT
+
+| MODULE | INSTALLED |
+| :--- | :--- |
+{stack_table}
+
+## ◈ 04 / GITHUB SIGNAL
+
+{activity}
+
+<p align="center">
+  <sub>
+    Contribution calendar and complete history →
+    <a href="{github}#overview">OPEN GITHUB ↗</a>
+  </sub>
+</p>
+
+---
+
+<p align="center">
+  <strong>HAVE AN IDEA? LET’S BUILD IT.</strong>
+  <br /><br />
+  <a href="{linkedin}">CONNECT ON LINKEDIN ↗</a>
+  &nbsp; / &nbsp;
+  <a href="{github}?tab=repositories">EXPLORE REPOSITORIES ↗</a>
+  <br /><br />
+  <sub>END OF TRANSMISSION // {name.upper()}</sub>
+</p>
+"""
+
+    readme_path.write_text(
+        readme,
+        encoding="utf-8",
+    )
+
+    print("Generated terminal.svg and README.md")
 
 
 if __name__ == "__main__":
