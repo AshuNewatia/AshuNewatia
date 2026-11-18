@@ -1,105 +1,117 @@
 <div align="center">
 
-# ASHU NEWATIA
-
 <img
-  src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=23&duration=2800&pause=1000&color=00FFCC&center=true&vCenter=true&width=750&height=50&lines=%3E%3E+SYS.ADMIN+%2F%2F+IIT+INDORE;%3E%3E+FULL-STACK+DEVELOPER;%3E%3E+COMPETITIVE+PROGRAMMER;%3E%3E+BUILDING+REAL-TIME+SYSTEMS"
-  alt="Animated typing: full-stack developer and competitive programmer"
+  src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&height=65&lines=ASHU_NEWATIA;%3E%3E+SYS.ADMIN;%3E%3E+FULL-STACK+ENGINEER"
+  alt="Ashu Newatia — animated cyberpunk header"
 />
 
 <br />
 
-<img
-  src="./terminal.svg"
-  width="100%"
-  alt="Ashu Newatia's animated cyberpunk terminal"
-/>
+<code>[ STATUS: ONLINE ]</code>
+&nbsp; ⠒ &nbsp;
+<code>[ BASE: INDORE, MP ]</code>
+&nbsp; ⠒ &nbsp;
+<code>[ MODE: BUILD ]</code>
 
 <br /><br />
 
-**`[ BUILD SYSTEMS / SOLVE PROBLEMS / KEEP EXPLORING ]`**
-
-<br /><br />
-
-<a href="https://github.com/AshuNewatia?tab=repositories">
+<a href="https://github.com/AshuNewatia">
   <img
-    src="https://img.shields.io/badge/ACCESS-REPOSITORIES-000000?style=for-the-badge&logo=github&logoColor=00ffcc&labelColor=000000&color=000000"
-    alt="Explore repositories"
+    src="https://img.shields.io/badge/GITHUB-AshuNewatia-000000?style=for-the-badge&logo=github&logoColor=00FFCC&labelColor=000000&color=000000"
+    alt="GitHub"
   />
 </a>
 <a href="https://www.linkedin.com/in/ashunewatia23/">
   <img
-    src="https://img.shields.io/badge/CONNECT-LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=ff0055&labelColor=000000&color=000000"
-    alt="Connect on LinkedIn"
+    src="https://img.shields.io/badge/LINKEDIN-CONNECT-000000?style=for-the-badge&logo=linkedin&logoColor=FF0055&labelColor=000000&color=000000"
+    alt="LinkedIn"
   />
 </a>
+
+<br /><br />
+
+<sub><strong>BUILD SYSTEMS // SOLVE PROBLEMS // KEEP EXPLORING</strong></sub>
 
 </div>
 
 ---
 
-## ◈ 01 / SYSTEM PROFILE
+## ▓▒░ 01 // SYSTEM_PROFILE
 
-<table>
-  <tr>
-    <td width="62%" valign="top">
+> **`OPERATIVE:`** Ashu Newatia  
+> **`BASE:`** Indore, Madhya Pradesh  
+> **`EDUCATION:`** B.Tech CSE @ IIT Indore  
+> **`DIRECTIVE:`** Build useful software, explore intelligent interfaces,
+> and solve interesting problems.
 
-**`> USER IDENTIFIED: ASHU NEWATIA`**
+I work across full-stack development, real-time systems, and voice AI.
+I’m also a **Web Development Domain Lead at GDG IIT Indore** and a
+**Coordinator at CSESA**.
 
-B.Tech CSE student at **IIT Indore**, building real-time products,
-collaborative platforms, and AI-powered interfaces.
+<details>
+  <summary><strong>[+] EXPAND DECRYPTED_ACHIEVEMENTS.log</strong></summary>
 
-**`> CURRENT DIRECTIVES`**
+```bash
+ashu@iit:~$ cat DECRYPTED_ACHIEVEMENTS.log
 
-- **Domain Lead — Web Development**, GDG IIT Indore
-- **Coordinator**, CSESA IIT Indore
-- **Codeforces Expert** · max rating **1630**
-- Exploring full-stack development, real-time systems, and voice AI
+[ ACADEMICS ]
+> B.Tech CSE, IIT Indore
+> CGPA: 9.04
+> SRMC: AIR 76
 
-    </td>
-    <td width="38%" align="center" valign="middle">
-      <img
-        src="./assets/waneella.gif"
-        width="100%"
-        alt="Animated pixel-art workspace"
-      />
-    </td>
-  </tr>
-</table>
+[ COMPETITIVE_PROGRAMMING ]
+> Codeforces: Expert
+> Maximum rating: 1630
+
+[ PROJECTS ]
+> CampusFlow: IITISoC '26 — 3rd Place
+
+[ LEADERSHIP ]
+> Web Development Domain Lead — GDG IIT Indore
+> Coordinator — CSESA IIT Indore
+
+ashu@iit:~$ _
+```
+
+</details>
 
 ---
 
-## ◈ 02 / FEATURED MISSIONS
+## ▓▒░ 02 // ACTIVE_MISSIONS
 
-<table>
+<table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <strong>◈ 01 / CAMPUSFLOW</strong>
+      <strong>◈ MISSION_01 // CAMPUSFLOW</strong>
       <br />
-      <sub>IITISoC '26 · 3rd Place</sub>
+      <sub>STATUS: DEPLOYED IN PROJECT ARCHIVE</sub>
       <br /><br />
       A real-time collaborative workspace with two-way GitHub issue
       synchronization.
       <br /><br />
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=00ffcc" alt="Next.js" />
-      <img src="https://img.shields.io/badge/Socket.IO-000000?style=flat-square&logo=socketdotio&logoColor=ff0055" alt="Socket.IO" />
-      <img src="https://img.shields.io/badge/MongoDB-000000?style=flat-square&logo=mongodb&logoColor=00ffcc" alt="MongoDB" />
+      <strong>ACHIEVEMENT:</strong> IITISoC '26 — 3rd Place
+      <br /><br />
+      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=00FFCC" alt="Next.js" />
+      <img src="https://img.shields.io/badge/Socket.IO-000000?style=flat-square&logo=socketdotio&logoColor=FF0055" alt="Socket.IO" />
+      <img src="https://img.shields.io/badge/MongoDB-000000?style=flat-square&logo=mongodb&logoColor=FFFF00" alt="MongoDB" />
       <br /><br />
       <a href="https://github.com/AshuNewatia/SoC">
         <strong>[ ACCESS REPOSITORY ↗ ]</strong>
       </a>
     </td>
     <td width="50%" valign="top">
-      <strong>◈ 02 / IMF TACTICAL VOICE AGENT</strong>
+      <strong>◈ MISSION_02 // IMF TACTICAL VOICE AGENT</strong>
       <br />
-      <sub>Real-time voice AI</sub>
+      <sub>STATUS: VOICE INTERFACE</sub>
       <br /><br />
-      An AI voice terminal for low-latency spoken conversations and
+      A real-time AI voice terminal for spoken interactions and
       intelligent responses.
       <br /><br />
-      <img src="https://img.shields.io/badge/LiveKit-000000?style=flat-square&logo=livekit&logoColor=00ffcc" alt="LiveKit" />
-      <img src="https://img.shields.io/badge/TypeScript-000000?style=flat-square&logo=typescript&logoColor=ff0055" alt="TypeScript" />
-      <img src="https://img.shields.io/badge/Deepgram-000000?style=flat-square&logo=deepgram&logoColor=00ffcc" alt="Deepgram" />
+      <strong>FOCUS:</strong> Low-latency voice AI
+      <br /><br />
+      <img src="https://img.shields.io/badge/LiveKit-000000?style=flat-square&logo=livekit&logoColor=00FFCC" alt="LiveKit" />
+      <img src="https://img.shields.io/badge/TypeScript-000000?style=flat-square&logo=typescript&logoColor=FF0055" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Deepgram-000000?style=flat-square&logo=deepgram&logoColor=FFFF00" alt="Deepgram" />
       <br /><br />
       <a href="https://github.com/AshuNewatia/Live-Voice-Agent">
         <strong>[ ACCESS REPOSITORY ↗ ]</strong>
@@ -108,32 +120,31 @@ collaborative platforms, and AI-powered interfaces.
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <strong>◈ 03 / INSTIBUS</strong>
+      <strong>◈ MISSION_03 // INSTIBUS</strong>
       <br />
-      <sub>Campus transport system</sub>
+      <sub>STATUS: CAMPUS TRANSPORT</sub>
       <br /><br />
       A full-stack campus transit platform for trips, bookings, and
       aggregate seat availability.
       <br /><br />
-      <img src="https://img.shields.io/badge/React-000000?style=flat-square&logo=react&logoColor=00ffcc" alt="React" />
-      <img src="https://img.shields.io/badge/Node.js-000000?style=flat-square&logo=nodedotjs&logoColor=ff0055" alt="Node.js" />
-      <img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat-square&logo=postgresql&logoColor=00ffcc" alt="PostgreSQL" />
+      <strong>FOCUS:</strong> Campus mobility
+      <br /><br />
+      <img src="https://img.shields.io/badge/React-000000?style=flat-square&logo=react&logoColor=00FFCC" alt="React" />
+      <img src="https://img.shields.io/badge/Node.js-000000?style=flat-square&logo=nodedotjs&logoColor=FF0055" alt="Node.js" />
+      <img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat-square&logo=postgresql&logoColor=FFFF00" alt="PostgreSQL" />
       <br /><br />
       <a href="https://github.com/AshuNewatia/Instibus">
         <strong>[ ACCESS REPOSITORY ↗ ]</strong>
       </a>
     </td>
     <td width="50%" valign="top">
-      <strong>◈ 04 / OPEN CHANNEL</strong>
+      <strong>◈ MISSION_04 // STANDBY</strong>
       <br />
-      <sub>More projects and experiments</sub>
+      <sub>STATUS: AWAITING NEXT TRANSMISSION</sub>
       <br /><br />
-      Explore more work in full-stack development, real-time interfaces,
-      and problem solving.
+      This slot is reserved for the next project.
       <br /><br />
-      <img src="https://img.shields.io/badge/BUILD-000000?style=flat-square&logo=github&logoColor=00ffcc" alt="Build" />
-      <img src="https://img.shields.io/badge/LEARN-000000?style=flat-square&logo=github&logoColor=ff0055" alt="Learn" />
-      <img src="https://img.shields.io/badge/ITERATE-000000?style=flat-square&logo=github&logoColor=00ffcc" alt="Iterate" />
+      <code>[ NEXT BUILD: LOADING... ]</code>
       <br /><br />
       <a href="https://github.com/AshuNewatia?tab=repositories">
         <strong>[ EXPLORE ALL REPOSITORIES ↗ ]</strong>
@@ -144,101 +155,93 @@ collaborative platforms, and AI-powered interfaces.
 
 ---
 
-## ◈ 03 / THE TOOLKIT
+## ▓▒░ 03 // THE_ARSENAL
 
-**`> LANGUAGES`**
-
-<p>
-  <img src="https://img.shields.io/badge/C%2B%2B-000000?style=for-the-badge&logo=cplusplus&logoColor=00ffcc" alt="C++" />
-  <img src="https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=ff0055" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00ffcc" alt="Python" />
-</p>
-
-**`> FRONTEND`**
-
-<p>
-  <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=00ffcc" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=ff0055" alt="Next.js" />
-</p>
-
-**`> BACKEND / DATA`**
-
-<p>
-  <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=00ffcc" alt="Node.js" />
-  <img src="https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=mongodb&logoColor=ff0055" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=00ffcc" alt="PostgreSQL" />
-</p>
-
-**`> REAL-TIME / VOICE`**
-
-<p>
-  <img src="https://img.shields.io/badge/LiveKit-000000?style=for-the-badge&logo=livekit&logoColor=00ffcc" alt="LiveKit" />
-  <img src="https://img.shields.io/badge/WebRTC-000000?style=for-the-badge&logo=webrtc&logoColor=ff0055" alt="WebRTC" />
-  <img src="https://img.shields.io/badge/Socket.IO-000000?style=for-the-badge&logo=socketdotio&logoColor=00ffcc" alt="Socket.IO" />
-</p>
+<table width="100%">
+  <tr>
+    <td width="22%" align="right" valign="middle">
+      <strong>LANGUAGES //</strong>
+    </td>
+    <td width="78%" align="left">
+      <img src="https://img.shields.io/badge/C%2B%2B-000000?style=for-the-badge&logo=cplusplus&logoColor=00FFCC" alt="C++" />
+      <img src="https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=FF0055" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=FFFF00" alt="Python" />
+    </td>
+  </tr>
+  <tr>
+    <td width="22%" align="right" valign="middle">
+      <strong>FRONTEND //</strong>
+    </td>
+    <td width="78%" align="left">
+      <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=00FFCC" alt="React" />
+      <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=FF0055" alt="Next.js" />
+    </td>
+  </tr>
+  <tr>
+    <td width="22%" align="right" valign="middle">
+      <strong>BACKEND //</strong>
+    </td>
+    <td width="78%" align="left">
+      <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=00FFCC" alt="Node.js" />
+      <img src="https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=mongodb&logoColor=FF0055" alt="MongoDB" />
+      <img src="https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=FFFF00" alt="PostgreSQL" />
+    </td>
+  </tr>
+  <tr>
+    <td width="22%" align="right" valign="middle">
+      <strong>REAL-TIME //</strong>
+    </td>
+    <td width="78%" align="left">
+      <img src="https://img.shields.io/badge/LiveKit-000000?style=for-the-badge&logo=livekit&logoColor=00FFCC" alt="LiveKit" />
+      <img src="https://img.shields.io/badge/WebRTC-000000?style=for-the-badge&logo=webrtc&logoColor=FF0055" alt="WebRTC" />
+      <img src="https://img.shields.io/badge/Socket.IO-000000?style=for-the-badge&logo=socketdotio&logoColor=FFFF00" alt="Socket.IO" />
+    </td>
+  </tr>
+</table>
 
 ---
 
-## ◈ 04 / GITHUB SIGNAL
+## ▓▒░ 04 // GITHUB_TELEMETRY
 
 <div align="center">
 
 <img
-  src="https://github-readme-stats.vercel.app/api?username=AshuNewatia&show_icons=true&hide_border=true&bg_color=00000000&title_color=00ffcc&text_color=ffffff&icon_color=ff0055"
+  src="https://github-readme-stats.vercel.app/api?username=AshuNewatia&show_icons=true&theme=transparent&bg_color=09090b&title_color=00FFCC&text_color=a3a3a3&icon_color=FF0055&border_color=00FFCC&border_radius=0"
   height="175"
   alt="Ashu Newatia's GitHub statistics"
 />
 <img
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=AshuNewatia&layout=compact&hide_border=true&bg_color=00000000&title_color=00ffcc&text_color=ffffff&icon_color=ff0055"
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=AshuNewatia&layout=compact&theme=transparent&bg_color=09090b&title_color=00FFCC&text_color=a3a3a3&icon_color=FF0055&border_color=00FFCC&border_radius=0"
   height="175"
-  alt="Most-used languages in Ashu Newatia's repositories"
+  alt="Top languages in Ashu Newatia's repositories"
 />
 
 <br /><br />
 
-<sub>
-  [ <a href="https://github.com/AshuNewatia#overview">
-  VIEW CONTRIBUTION HISTORY ↗</a> ]
-</sub>
+<code>[ DATA SOURCE: GITHUB ]</code>
+&nbsp; ⠒ &nbsp;
+<a href="https://github.com/AshuNewatia#overview">
+  <strong>[ OPEN CONTRIBUTION HISTORY ↗ ]</strong>
+</a>
 
 </div>
 
 ---
 
-## ◈ 05 / SYSTEM LOGS
-
-<details>
-  <summary><strong>[+] &gt;&gt; EXPAND SYSTEM_LOGS / ACHIEVEMENTS</strong></summary>
-
-  <br />
-
-  > **`ashu@iit:~$ cat achievements.log`**
-  >
-  > `CP_RATING` &nbsp;&nbsp;&nbsp; Codeforces Expert · Max rating **1630**  
-  > `ACADEMICS` &nbsp;&nbsp; CGPA **9.04**  
-  > `SRMC` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All India Rank **76**  
-  > `IITISOC_26` &nbsp; **3rd Place** · CampusFlow  
-  > `LEADERSHIP` &nbsp; Web Development Domain Lead · GDG IIT Indore  
-  > `COMMUNITY` &nbsp;&nbsp; Coordinator · CSESA IIT Indore
-
-</details>
-
----
-
 <div align="center">
 
-### `> HAVE AN IDEA? LET'S BUILD IT.`
+### `>> HAVE AN IDEA? LET'S BUILD IT.`
 
 <a href="https://github.com/AshuNewatia">
   <strong>[ GITHUB ↗ ]</strong>
 </a>
-&nbsp; / &nbsp;
+&nbsp; // &nbsp;
 <a href="https://www.linkedin.com/in/ashunewatia23/">
   <strong>[ LINKEDIN ↗ ]</strong>
 </a>
 
 <br /><br />
 
-<sub><strong>END OF TRANSMISSION // ASHU NEWATIA</strong></sub>
+<sub><strong>END OF TRANSMISSION // ASHU_NEWATIA</strong></sub>
 
 </div>
