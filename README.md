@@ -1,7 +1,8 @@
 <div align="center">
 
-<!-- Animated header on top. Edit its text in scripts/generate_art.py. -->
-<img src="./assets/hero.svg" width="100%" alt="Ashu Newatia: Full Stack Developer, Voice AI Explorer, building at IIT Indore" />
+<h1>Hey, I’m Ashu Newatia 👋</h1>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Roboto&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=F5A97F&amp;center=true&amp;vCenter=true&amp;width=600&amp;lines=Domain+Lead+Web+Dev+%40+GDG;Coordinator+%40+CSESA;DSA+in+C%2B%2B;Full-Stack+Developer" alt="Domain Lead Web Dev at GDG · Coordinator at CSESA · DSA in C++ · Full-Stack Developer" />
 
 <br />
 
@@ -10,10 +11,7 @@
 
 <br /><br />
 
-...
-
 **Turning practical problems into useful software.**
-
 
 [Repositories ↗](https://github.com/AshuNewatia?tab=repositories) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
 
@@ -49,28 +47,24 @@
 
 <img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
 
-### `03 / GITHUB TELEMETRY`
-
-<!-- GITHUB-TELEMETRY:START -->
+### `03 / BUILD LOG`
 
 <div align="center">
 
-### ⚡ 440 contributions &nbsp; · &nbsp; 1-day streak &nbsp; · &nbsp; 5-day best
+**Ideas → code → something useful.**
 
-**10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **3 followers**
+<a href="https://github.com/AshuNewatia?tab=repositories"><img src="https://img.shields.io/github/repo-size/AshuNewatia/AshuNewatia?style=for-the-badge&amp;label=PROFILE%20REPO&amp;color=F5A97F&amp;labelColor=1C1C24" alt="Profile repository size" /></a>
+<a href="https://github.com/AshuNewatia?tab=followers"><img src="https://img.shields.io/github/followers/AshuNewatia?style=for-the-badge&amp;label=FOLLOWERS&amp;color=C6A0F6&amp;labelColor=1C1C24" alt="GitHub followers" /></a>
 
-<br />
+<br /><br />
 
-**CONTRIBUTION SIGNAL**
+**Explore the work behind the profile**
 
-<img src="./assets/analytics.svg" width="100%" alt="Animated circuit scanner with actual weekly contribution totals above a daily contribution calendar. The scanner is decorative; the data is fetched from GitHub." />
+[Browse repositories ↗](https://github.com/AshuNewatia?tab=repositories) &nbsp; · &nbsp; [View contribution history ↗](https://github.com/AshuNewatia#overview)
 
-<sub>2025-11-08 → 2026-11-07 · 68 active days · 5 original repos · 5 forks</sub>
-
+<sub>The contribution history opens GitHub’s own activity calendar.</sub>
 
 </div>
-
-<!-- GITHUB-TELEMETRY:END -->
 
 <img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
 
@@ -147,6 +141,6 @@ Web experiences for TEDx, GDG, and the Science & Technology Council at IIT Indor
 
 **Let's make the next one useful.**
 
-[GitHub ↗](https://github.com/AshuNewatia) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
+[LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
 
 </div>
