@@ -78,7 +78,17 @@ Building real-time products and intelligent interfaces. I enjoy connecting colla
 
 <!-- GITHUB-TELEMETRY:START -->
 
-*Activity appears after the first successful refresh.*
+<div align="center">
+
+### ⚡ 480 contributions in the last year &nbsp; · &nbsp; 74 active days
+
+**5** original public repositories &nbsp; / &nbsp; **4** followers
+
+<sub>Last 365 UTC dates · updated 18 Nov 2026 · 16:07 UTC · GitHub GraphQL API</sub>
+
+[View GitHub’s contribution calendar ↗](https://github.com/AshuNewatia#overview)
+
+</div>
 
 <!-- GITHUB-TELEMETRY:END -->
 
