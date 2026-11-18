@@ -1,0 +1,39 @@
+{
+  "name": "Ashu Newatia",
+  "title": "B.TECH CSE @ IIT INDORE",
+  "bio": "Building real-time products, intelligent interfaces and useful systems.",
+  "roles": [
+    "DOMAIN LEAD — WEB DEVELOPMENT, GDG IIT INDORE",
+    "COORDINATOR — CSESA, IIT INDORE",
+    "CODEFORCES EXPERT — MAX RATING 1630"
+  ],
+  "tech_stack": [
+    "C++",
+    "TypeScript",
+    "Python",
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "PostgreSQL",
+    "LiveKit WebRTC",
+    "Socket.IO"
+  ],
+  "projects": [
+    {
+      "name": "CAMPUSFLOW",
+      "description": "Real-time workspace with two-way GitHub issue sync.",
+      "highlight": "IITISoC'26 — 3RD PLACE"
+    },
+    {
+      "name": "IMF TACTICAL VOICE AGENT",
+      "description": "LiveKit, Deepgram, Gemma-4 and Cartesia voice AI.",
+      "highlight": "REAL-TIME VOICE TERMINAL"
+    },
+    {
+      "name": "INSTIBUS",
+      "description": "Campus transit, bookings and aggregate seat availability.",
+      "highlight": "CAMPUS TRANSPORT SYSTEM"
+    }
+  ],
+  "contact": "github.com/AshuNewatia"
+}

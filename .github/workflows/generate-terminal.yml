@@ -1,0 +1,50 @@
+name: Generate cyberpunk terminal
+
+on:
+  push:
+    paths:
+      - data.json
+      - terminal.template.svg
+      - generate_terminal.py
+      - .github/workflows/generate-terminal.yml
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-profile-terminal
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate terminal
+        run: python generate_terminal.py
+
+      - name: Commit generated SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add terminal.svg
+
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+
+          git commit -m "chore: regenerate cyberpunk terminal"
+          git pull --rebase
+          git push

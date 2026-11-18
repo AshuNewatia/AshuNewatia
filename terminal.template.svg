@@ -1,0 +1,470 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="850"
+  viewBox="0 0 1100 850"
+  role="img"
+  aria-labelledby="profile-title profile-description"
+>
+  <title id="profile-title">
+    {{NAME}} — Cyberpunk GitHub Profile
+  </title>
+
+  <desc id="profile-description">
+    Animated terminal introducing {{NAME}}, roles, skills, and projects.
+  </desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030907" />
+      <stop offset="55%" stop-color="#010303" />
+      <stop offset="100%" stop-color="#090309" />
+    </linearGradient>
+
+    <linearGradient id="scanline-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00ffcc" stop-opacity="0.13" />
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern
+      id="crt-pattern"
+      width="4"
+      height="4"
+      patternUnits="userSpaceOnUse"
+    >
+      <rect width="4" height="2" fill="#000000" opacity="0.18" />
+    </pattern>
+
+    <clipPath id="screen-clip">
+      <rect x="17" y="17" width="1066" height="816" rx="14" />
+    </clipPath>
+
+    <filter id="cyan-glow" x="-40%" y="-100%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="pink-glow" x="-40%" y="-100%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+
+    .terminal {
+      font-family: "Fira Code", "Courier New", monospace;
+    }
+
+    .name {
+      font-size: 46px;
+      font-weight: 700;
+      fill: #00ffcc;
+      filter: url(#cyan-glow);
+      animation: name-glitch 7s infinite;
+    }
+
+    .name-pink {
+      font-size: 46px;
+      font-weight: 700;
+      fill: #ff0055;
+      opacity: 0;
+      animation: glitch-pink 7s infinite;
+    }
+
+    .name-green {
+      font-size: 46px;
+      font-weight: 700;
+      fill: #00ff00;
+      opacity: 0;
+      animation: glitch-green 7s infinite;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      fill: #ff0055;
+      filter: url(#pink-glow);
+      letter-spacing: 1px;
+    }
+
+    .tiny {
+      font-size: 12px;
+      fill: #66aa95;
+    }
+
+    .line {
+      font-size: 15px;
+      opacity: 0;
+      animation-name: line-reveal;
+      animation-duration: 0.35s;
+      animation-fill-mode: forwards;
+    }
+
+    .line-1  { animation-delay: 0.4s; }
+    .line-2  { animation-delay: 0.8s; }
+    .line-3  { animation-delay: 1.2s; }
+    .line-4  { animation-delay: 1.6s; }
+    .line-5  { animation-delay: 2.0s; }
+    .line-6  { animation-delay: 2.4s; }
+    .line-7  { animation-delay: 2.8s; }
+    .line-8  { animation-delay: 3.2s; }
+    .line-9  { animation-delay: 3.6s; }
+    .line-10 { animation-delay: 4.0s; }
+    .line-11 { animation-delay: 4.4s; }
+    .line-12 { animation-delay: 4.8s; }
+    .line-13 { animation-delay: 5.2s; }
+    .line-14 { animation-delay: 5.6s; }
+    .line-15 { animation-delay: 6.0s; }
+    .line-16 { animation-delay: 6.4s; }
+
+    .prompt {
+      fill: #ff0055;
+      font-weight: 700;
+    }
+
+    .command {
+      fill: #00ffcc;
+      font-weight: 600;
+    }
+
+    .output {
+      fill: #b5e7ce;
+    }
+
+    .role {
+      fill: #00ff00;
+    }
+
+    .project-name {
+      fill: #ff6b9b;
+      font-weight: 700;
+    }
+
+    .project-highlight {
+      fill: #00ffcc;
+    }
+
+    .scanline {
+      animation: scan-down 5s linear infinite;
+    }
+
+    .cursor {
+      fill: #00ff00;
+      opacity: 0;
+      animation:
+        cursor-appear 0.1s 6.8s forwards,
+        cursor-blink 1s 6.8s step-end infinite;
+    }
+
+    .status-dot {
+      fill: #00ff00;
+      animation: status-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes line-reveal {
+      from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scan-down {
+      from {
+        transform: translateY(-120px);
+      }
+
+      to {
+        transform: translateY(900px);
+      }
+    }
+
+    @keyframes cursor-appear {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes cursor-blink {
+      0%, 49% {
+        opacity: 1;
+      }
+
+      50%, 100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes status-pulse {
+      0%, 100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes name-glitch {
+      0%, 91%, 96%, 100% {
+        transform: translateX(0);
+      }
+
+      92% {
+        transform: translateX(-2px);
+      }
+
+      93% {
+        transform: translateX(2px);
+      }
+
+      94% {
+        transform: translateX(-1px);
+      }
+    }
+
+    @keyframes glitch-pink {
+      0%, 90%, 96%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      91%, 93% {
+        opacity: 0.5;
+        transform: translateX(-3px);
+      }
+    }
+
+    @keyframes glitch-green {
+      0%, 90%, 96%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      92%, 94% {
+        opacity: 0.45;
+        transform: translateX(3px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .line,
+      .cursor {
+        animation: none;
+        opacity: 1;
+      }
+
+      .name,
+      .status-dot {
+        animation: none;
+      }
+
+      .name-pink,
+      .name-green,
+      .scanline {
+        display: none;
+        animation: none;
+      }
+    }
+  </style>
+
+  <rect width="1100" height="850" rx="18" fill="#000000" />
+
+  <rect
+    x="16"
+    y="16"
+    width="1068"
+    height="818"
+    rx="15"
+    fill="url(#background)"
+    stroke="#00ffcc"
+    stroke-opacity="0.65"
+    stroke-width="2"
+  />
+
+  <g clip-path="url(#screen-clip)">
+    <!-- Terminal title bar -->
+
+    <rect x="17" y="17" width="1066" height="45" fill="#07120e" />
+
+    <line
+      x1="17"
+      y1="62"
+      x2="1083"
+      y2="62"
+      stroke="#00ffcc"
+      stroke-opacity="0.35"
+    />
+
+    <circle cx="40" cy="39" r="5" fill="#ff0055" />
+    <circle cx="59" cy="39" r="5" fill="#ffae42" />
+    <circle cx="78" cy="39" r="5" fill="#00ff00" />
+
+    <g class="terminal">
+      <text x="105" y="44" class="tiny">
+        ASHU@IIT-INDORE:~ / PROFILE TERMINAL
+      </text>
+
+      <circle cx="965" cy="39" r="4" class="status-dot" />
+
+      <text x="978" y="44" class="tiny">
+        ONLINE
+      </text>
+
+      <!-- Name and title -->
+
+      <text x="50" y="118" class="name-pink">{{NAME}}</text>
+      <text x="50" y="118" class="name-green">{{NAME}}</text>
+      <text x="50" y="118" class="name">{{NAME}}</text>
+
+      <text x="52" y="148" class="subtitle">
+        &gt;&gt; {{TITLE}}
+      </text>
+
+      <line
+        x1="50"
+        y1="168"
+        x2="1050"
+        y2="168"
+        stroke="#00ffcc"
+        stroke-opacity="0.25"
+      />
+
+      <!-- Bio -->
+
+      <text x="52" y="200" class="line line-1">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+        <tspan class="command">whoami</tspan>
+      </text>
+
+      <text x="52" y="227" class="line line-2 output">
+        {{BIO}}
+      </text>
+
+      <!-- Roles -->
+
+      <text x="52" y="266" class="line line-3">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+        <tspan class="command">cat roles.txt</tspan>
+      </text>
+
+      <text x="52" y="293" class="line line-4 role">
+        [01] {{ROLE_1}}
+      </text>
+
+      <text x="52" y="318" class="line line-5 role">
+        [02] {{ROLE_2}}
+      </text>
+
+      <text x="52" y="343" class="line line-6 role">
+        [03] {{ROLE_3}}
+      </text>
+
+      <!-- Technologies -->
+
+      <text x="52" y="382" class="line line-7">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+        <tspan class="command">cat tech_stack.txt</tspan>
+      </text>
+
+      <text x="52" y="409" class="line line-8 output">
+        {{TECH_STACK_1}}
+      </text>
+
+      <text x="52" y="434" class="line line-9 output">
+        {{TECH_STACK_2}}
+      </text>
+
+      <!-- Projects -->
+
+      <text x="52" y="473" class="line line-10">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+        <tspan class="command">ls ./projects --featured</tspan>
+      </text>
+
+      <text x="52" y="506" class="line line-11">
+        <tspan class="project-name">[{{PROJECT_1_NAME}}]</tspan>
+        <tspan class="project-highlight"> {{PROJECT_1_HIGHLIGHT}}</tspan>
+      </text>
+
+      <text x="52" y="530" class="line line-11 output">
+        {{PROJECT_1_DESCRIPTION}}
+      </text>
+
+      <text x="52" y="567" class="line line-12">
+        <tspan class="project-name">[{{PROJECT_2_NAME}}]</tspan>
+        <tspan class="project-highlight"> {{PROJECT_2_HIGHLIGHT}}</tspan>
+      </text>
+
+      <text x="52" y="591" class="line line-12 output">
+        {{PROJECT_2_DESCRIPTION}}
+      </text>
+
+      <text x="52" y="628" class="line line-13">
+        <tspan class="project-name">[{{PROJECT_3_NAME}}]</tspan>
+        <tspan class="project-highlight"> {{PROJECT_3_HIGHLIGHT}}</tspan>
+      </text>
+
+      <text x="52" y="652" class="line line-13 output">
+        {{PROJECT_3_DESCRIPTION}}
+      </text>
+
+      <!-- Contact -->
+
+      <text x="52" y="699" class="line line-14">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+        <tspan class="command">cat contact.txt</tspan>
+      </text>
+
+      <text x="52" y="727" class="line line-15 output">
+        {{CONTACT}}
+      </text>
+
+      <text x="52" y="770" class="line line-16">
+        <tspan class="prompt">ashu@iit:~$ </tspan>
+      </text>
+
+      <rect x="170" y="754" width="10" height="19" class="cursor" />
+
+      <text x="1050" y="805" text-anchor="end" class="tiny">
+        SYSTEM / BUILD · LEARN · ITERATE
+      </text>
+    </g>
+
+    <!-- CRT texture -->
+
+    <rect
+      x="17"
+      y="17"
+      width="1066"
+      height="816"
+      fill="url(#crt-pattern)"
+      pointer-events="none"
+    />
+
+    <!-- Moving scanline -->
+
+    <rect
+      x="17"
+      y="0"
+      width="1066"
+      height="100"
+      fill="url(#scanline-gradient)"
+      class="scanline"
+      pointer-events="none"
+    />
+  </g>
+</svg>
