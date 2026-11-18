@@ -51,10 +51,9 @@
 
 <div align="center">
 
-**Ideas → code → something useful.**
+### ⚡ 470 contributions &nbsp; · &nbsp; 0-day streak &nbsp; · &nbsp; 5-day best
 
-<a href="https://github.com/AshuNewatia?tab=repositories"><img src="https://img.shields.io/github/repo-size/AshuNewatia/AshuNewatia?style=for-the-badge&amp;label=PROFILE%20REPO&amp;color=F5A97F&amp;labelColor=1C1C24" alt="Profile repository size" /></a>
-<a href="https://github.com/AshuNewatia?tab=followers"><img src="https://img.shields.io/github/followers/AshuNewatia?style=for-the-badge&amp;label=FOLLOWERS&amp;color=C6A0F6&amp;labelColor=1C1C24" alt="GitHub followers" /></a>
+**10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **4 followers**
 
 <br /><br />
 
