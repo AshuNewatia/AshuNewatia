@@ -35,7 +35,8 @@ class TelemetryTests(unittest.TestCase):
         data=m.summarize(self.user,[],self.days,self.now,'API')
         self.assertEqual(data['metrics']['best_streak_days'],5)
         self.assertEqual(data['metrics']['current_streak_days'],0)
-        self.assertIn('No detected languages',m.markdown(data))
+        self.assertNotIn('stars', m.markdown(data))
+        self.assertIn('2** original public repositories', m.markdown(m.summarize(self.user, self.repos, self.days, self.now, 'API')))
 
     def test_recent_repositories_are_sorted_and_rendered(self):
         repos = [
@@ -47,8 +48,9 @@ class TelemetryTests(unittest.TestCase):
         data = m.summarize(self.user, repos, self.days, self.now, 'API')
         self.assertEqual([r['name'] for r in data['recent_repositories']], ['new', 'old'])
         md = m.markdown(data)
-        self.assertIn('RECENTLY ACTIVE REPOSITORIES', md)
-        self.assertIn('A &#124; pipe', md)
+        self.assertNotIn('RECENTLY ACTIVE REPOSITORIES', md)
+        self.assertNotIn('LANGUAGE FREQUENCIES', md)
+        self.assertIn('2** stars', md)
         self.assertNotIn('forked', md)
 
 if __name__=='__main__':unittest.main()

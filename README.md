@@ -1,145 +1,107 @@
 <div align="center">
 
-<h1>Hey, I’m Ashu Newatia 👋</h1>
+# `ASHU NEWATIA` ✦
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Roboto&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=F5A97F&amp;center=true&amp;vCenter=true&amp;width=600&amp;lines=Domain+Lead+Web+Dev+%40+GDG;Coordinator+%40+CSESA;DSA+in+C%2B%2B;Full-Stack+Developer" alt="Domain Lead Web Dev at GDG · Coordinator at CSESA · DSA in C++ · Full-Stack Developer" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Roboto&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=F5A97F&amp;center=true&amp;vCenter=true&amp;width=600&amp;lines=Domain+Lead+Web+Dev+%40+GDG;Coordinator+%40+CSESA;DSA+in+C%2B%2B;Full-Stack+Developer" alt="Domain Lead Web Dev at GDG, Coordinator at CSESA, DSA in C++, Full-Stack Developer" />
 
-<br />
+<img src="./assets/avatar.gif" width="180" alt="Animated pixel-art developer workspace" />
 
-<!-- Centered avatar at half the page width. Change width="50%" to resize. -->
-<img src="./assets/avatar.gif" width="50%" alt="Animated pixel-art cyberpunk desk" />
+**`BUILD`** ideas into products &nbsp; ⟡ &nbsp; **`EXPLORE`** what's next
 
-<br /><br />
+[![GitHub](https://img.shields.io/badge/GITHUB-AshuNewatia-24212D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AshuNewatia)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-LET%27S_CONNECT-785A86?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashunewatia23/)
 
-**Turning practical problems into useful software.**
-
-[Repositories ↗](https://github.com/AshuNewatia?tab=repositories) &nbsp;·&nbsp; [LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
+**Open to:** Full-stack and voice AI internships · [Connect on LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
 
 </div>
 
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
+---
 
-<!-- EDIT: interests and focus areas. -->
-### `01 / DEVELOPER SIGNAL`
+### `01` &nbsp; / &nbsp; THE SIGNAL
 
-> **Build with purpose.** Understand the problem. Build. Test. Iterate.
->
-> **Explore with curiosity.** Voice AI, real-time collaboration, and quantum computing.
->
-> **Strengthen the foundations.** Data structures, algorithms, and problem solving in C++.
+```text
+ashu@iit-indore:~$ whoami
+> Developer building practical software and exploring intelligent interfaces.
+> Currently exploring voice AI, real-time collaboration, and quantum computing.
+> Always sharpening problem solving with data structures and algorithms in C++.
+```
 
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
+### `02` &nbsp; / &nbsp; TOOLKIT
 
-### `02 / TECHNOLOGY STACK`
+**Languages** &nbsp; C++ · Python · JavaScript · TypeScript · HTML · CSS  
+<img src="https://skillicons.dev/icons?i=cpp,python,js,ts,html,css&amp;theme=dark" alt="Languages" />
 
-<!-- EDIT: lists below. Update the icon URL too if you change a list. -->
-**Languages** — C++, Python, JavaScript, TypeScript, HTML, CSS
+**Interface** &nbsp; React · Next.js · Tailwind CSS · Three.js  
+<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,threejs&amp;theme=dark" alt="Frontend tools" />
 
-<img src="https://skillicons.dev/icons?i=cpp,python,js,ts,html,css&amp;theme=dark&amp;perline=6" alt="Language icons" />
+**Engine room** &nbsp; Node.js · Express · MongoDB · PostgreSQL · Git  
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,git,github&amp;theme=dark" alt="Backend and tools" />
 
-**Frontend** — React, Next.js, Tailwind CSS, Three.js
+---
 
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,threejs&amp;theme=dark&amp;perline=4" alt="Frontend technology icons" />
+### `03` &nbsp; / &nbsp; BUILD LOG
 
-**Backend & tools** — Node.js, Express, MongoDB, PostgreSQL, Git, GitHub, VS Code
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,git,github,vscode&amp;theme=dark&amp;perline=7" alt="Backend and developer tool icons" />
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
-
-### `03 / BUILD LOG`
-
+<!-- GITHUB-TELEMETRY:START -->
 <div align="center">
 
-### ⚡ 470 contributions &nbsp; · &nbsp; 0-day streak &nbsp; · &nbsp; 5-day best
+**Activity data will appear after the first successful GitHub Actions refresh.**
 
-**10 repositories** &nbsp; / &nbsp; **0 stars** &nbsp; / &nbsp; **4 followers**
-
-<br /><br />
-
-**Explore the work behind the profile**
-
-[Browse repositories ↗](https://github.com/AshuNewatia?tab=repositories) &nbsp; · &nbsp; [View contribution history ↗](https://github.com/AshuNewatia#overview)
-
-<sub>The contribution history opens GitHub’s own activity calendar.</sub>
+[View GitHub’s contribution calendar ↗](https://github.com/AshuNewatia#overview)
 
 </div>
+<!-- GITHUB-TELEMETRY:END -->
 
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
+---
 
-### `04 / CONNECTED BUILDS`
+### `04` &nbsp; / &nbsp; SELECTED BUILDS
 
-**One connected set of ideas. Open a project to explore.**
+<table>
+<tr><td width="50%">
 
-<!-- PROJECT NODE: copy one entire <details> block to add another project. -->
-<details open>
-<summary><b>◉ CampusFlow</b> — team collaboration</summary>
+#### `01` CampusFlow ↗
+A collaboration workspace connecting team tasks and GitHub activity.
 
-### CampusFlow
+`React` `Node.js` `MongoDB` `Socket.IO`
 
-Team collaboration meets developer workflow. A collaborative workspace connecting team tasks with GitHub activity.
+[Explore repository ↗](https://github.com/AshuNewatia/SoC)
 
-**Technologies:** `React` · `Node.js` · `MongoDB` · `Socket.IO` · `GitHub integration`
+</td><td width="50%">
 
-[View repository ↗](https://github.com/AshuNewatia/SoC)
+#### `02` Voice Assistant ↗
+A real-time voice interface for spoken conversations and responses.
 
-<!-- Add the exact project repository or demo link here when ready. -->
+`TypeScript` `LiveKit` `Speech AI`
 
-</details>
+[Explore repository ↗](https://github.com/AshuNewatia/Live-Voice-Agent)
 
-<details>
-<summary><b>◉ Voice Assistant</b> — conversational AI</summary>
+</td></tr>
+<tr><td width="50%">
 
-### Voice Assistant
+#### `03` Instibus ↗
+Bringing campus schedules, trip requests, and booking into one experience.
 
-Real-time conversations and spoken responses. Exploring how voice can make software more natural to use.
+`Next.js` `PostgreSQL`
 
-**Technologies:** `TypeScript` · `LiveKit` · `Speech AI`
+[Explore repository ↗](https://github.com/AshuNewatia/Instibus)
 
-[View repository ↗](https://github.com/AshuNewatia/Live-Voice-Agent)
+</td><td width="50%">
 
-</details>
+#### `04` Campus Web
+Creative web experiences for TEDx, GDG, and the S&T community at IIT Indore.
 
-<details>
-<summary><b>◉ Instibus</b> — campus mobility</summary>
+`React` `Next.js` `Three.js`
 
-### Instibus
+[Explore my repositories ↗](https://github.com/AshuNewatia?tab=repositories)
 
-Campus schedules, trip requests, and booking. Bringing everyday college transport into a single experience.
-
-**Technologies:** `Next.js` · `PostgreSQL`
-
-[View repository ↗](https://github.com/AshuNewatia/Instibus)
-
-<!-- Add the exact project repository or demo link here when ready. -->
-
-</details>
-
-<details>
-<summary><b>◉ Campus Web</b> — creative interfaces</summary>
-
-### Campus Web
-
-Web experiences for TEDx, GDG, and the Science & Technology Council at IIT Indore.
-
-**Technologies:** `React` · `Next.js` · `Three.js`
-
-<!-- Add the exact project repository or demo links here when ready. -->
-
-</details>
-
-<br />
-
-[Browse all repositories ↗](https://github.com/AshuNewatia?tab=repositories)
-
-<img src="./assets/circuit.svg" width="100%" alt="Animated cyan circuit divider" />
+</td></tr>
+</table>
 
 <div align="center">
 
-### Good ideas deserve to be built.
+### `LET'S BUILD SOMETHING USEFUL.`
 
-**Let's make the next one useful.**
+[LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/) &nbsp; · &nbsp; [All repositories ↗](https://github.com/AshuNewatia?tab=repositories)
 
-[LinkedIn ↗](https://www.linkedin.com/in/ashunewatia23/)
+<sub>Designed to build. Always learning.</sub>
 
 </div>

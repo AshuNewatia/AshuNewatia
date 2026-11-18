@@ -145,44 +145,17 @@ def summarize(user, repos, days, now, source):
 
 
 def markdown(data):
-    m, u = data['metrics'], data['username']
-    stamp = datetime.fromisoformat(data['fetched_at']).strftime('%Y-%m-%d %H:%M UTC')
-    def days(n): return f'{n}-day'
-    lines = [START, '', '<div align="center">', '',
-        f"### ⚡ {m['contributions']:,} contributions &nbsp; · &nbsp; {days(m['current_streak_days'])} streak &nbsp; · &nbsp; {days(m['best_streak_days'])} best", '',
-        f"**{m['public_repositories']} repositories** &nbsp; / &nbsp; **{m['stars_on_original_repositories']} stars** &nbsp; / &nbsp; **{m['followers']} followers**", '',
-        '<br />', '', '**CONTRIBUTION SIGNAL**', '',
-        '<img src="./assets/analytics.svg" width="100%" alt="Animated circuit scanner with actual weekly contribution totals above a daily contribution calendar. The scanner is decorative; the data is fetched from GitHub." />', '',
-        f"<sub>{data['window']['from']} → {data['window']['to']} · {m['active_days']} active days · {m['original_repositories']} original repos · {m['forked_repositories']} forks</sub>", '',
-        '<br /><br />', '', '**LANGUAGE FREQUENCIES**', '',
-        '<img src="./assets/language-signal.svg" width="100%" alt="Animated segmented language signal. Segment widths show the share of repositories by primary language." />', '']
-    langs = data['languages_by_primary_repository_count']
-    total = sum(langs.values())
-    symbols = ['🔵', '🟣', '🟢', '🟠', '🩷']
-    legend = []
-    for i, (name, count) in enumerate(langs.items()):
-        name = escape(name)
-        legend.append(f"{symbols[i%len(symbols)]} **{name} {count/total:.0%}** · {count} {'repo' if count == 1 else 'repos'}")
-    lines += [' &nbsp; / &nbsp; '.join(legend) if total else 'No detected languages', '']
-    recent = data.get('recent_repositories') or []
-    if recent:
-        def cell(text, limit=80):
-            text = ' '.join(str(text).split())
-            text = text if len(text) <= limit else text[:limit-1].rstrip() + '…'
-            return escape(text).replace('|', '&#124;')
-        lines += ['<br /><br />', '', '**RECENTLY ACTIVE REPOSITORIES**', '',
-                  '| Repository | About | Language | ★ | Last push |', '| --- | --- | --- | ---: | --- |']
-        for r in recent:
-            lines.append(f"| [{cell(r['name'], 40)}]({r['url']}) | {cell(r['description']) or '—'} | {cell(r['language']) or '—'} | {int(r['stars'])} | {cell(r['pushed_at']) or '—'} |")
-        lines.append('')
-    lines += ['<br /><br />', '', f'<sub>Fetched from GitHub · {stamp} · Hourly refresh</sub>', '', '</div>', '',
-        '<details>', '<summary><sub>Signal definitions, sources & refresh</sub></summary>', '',
-        'The upper signal plots actual weekly contribution totals; the matrix below shows daily contributions. Moving scanners, orbiting particles and glowing traces are decoration, not additional measurements.', '',
-        'Contributions and best streak cover the last 365 UTC dates. An unfinished day with no contributions does not break yesterday’s streak. GitHub may include anonymized private activity if enabled on your profile.', '',
-        'Stars are received stars on owned non-fork public repositories. Language widths count primary languages of owned non-fork public repositories, not time spent or code bytes. Legend order matches segments from left to right. The repository table lists your five most recently pushed original public repositories (this profile repository excluded).', '',
-        f"Sources: GitHub REST API + {data['sources']['contributions']}. Timestamped hourly snapshots; no fetch runs on profile visits.", '',
-        f'[Inspect fetched data](./assets/telemetry.json) · [Run refresh](https://github.com/{u}/{u}/actions/workflows/profile-analytics.yml)', '', '</details>', '', END]
-    return '\n'.join(lines)
+    m = data['metrics']
+    stamp = datetime.fromisoformat(data['fetched_at']).strftime('%d %b %Y · %H:%M UTC')
+    stars = f" &nbsp; / &nbsp; **{m['stars_on_original_repositories']:,}** stars" if m['stars_on_original_repositories'] else ''
+    return "\n".join([
+        START, '', '<div align="center">', '',
+        f"### ⚡ {m['contributions']:,} contributions in the last year &nbsp; · &nbsp; {m['active_days']:,} active days", '',
+        f"**{m['original_repositories']:,}** original public repositories{stars} &nbsp; / &nbsp; **{m['followers']:,}** followers", '',
+        f"<sub>Last 365 UTC dates · updated {stamp} · GitHub {escape(data['sources']['contributions'])}</sub>", '',
+        '[View GitHub’s contribution calendar ↗](https://github.com/' + data['username'] + '#overview)', '',
+        '</div>', '', END,
+    ])
 
 
 def svg_start(height):
@@ -279,7 +252,7 @@ def main():
     _, after = tail.split(END, 1)
     updated = before + markdown(data) + after
     # Fetches, validation and rendering all succeed before any output is replaced.
-    outputs = {ROOT/'assets/analytics.svg': calendar_svg(data), ROOT/'assets/language-signal.svg': language_svg(data), ROOT/'assets/telemetry.json': json.dumps(data, indent=2)+'\n', readme_path: updated}
+    outputs = {readme_path: updated}
     temps = []
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -288,7 +261,7 @@ def main():
         temps.append((tmp, path))
     for tmp, path in temps:
         tmp.replace(path)
-    print(f'Fetched GitHub telemetry for {user["login"]}; updated README.md, calendar and JSON.')
+    print(f'Fetched GitHub telemetry for {user["login"]}; updated README.md.')
 
 
 if __name__ == '__main__':
