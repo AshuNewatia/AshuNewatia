@@ -1,6 +1,8 @@
 name: Generate cyberpunk terminal
 
 on:
+  schedule:
+    - cron: "0 0 * * *"
   push:
     paths:
       - data.json
