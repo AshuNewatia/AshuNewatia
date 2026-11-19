@@ -15,6 +15,9 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+import section_art  # noqa: E402
 
 START = "<!-- GITHUB-TELEMETRY:START -->"
 END = "<!-- GITHUB-TELEMETRY:END -->"
@@ -307,6 +310,10 @@ def summarize(user, repositories, days, now, source):
         "original_repositories": len(original_repositories),
         "stars": stars,
         "followers": user["followers"],
+        "calendar": [
+            {"date": day["date"], "count": day["count"], "level": day["level"]}
+            for day in ordered
+        ],
     }
 
 
@@ -316,38 +323,41 @@ def markdown(data):
     ).strftime("%d %b %Y · %H:%M UTC")
 
     stars = ""
+    alt_stars = ""
 
     if data["stars"]:
         stars = f' &nbsp; / &nbsp; **{data["stars"]:,}** stars'
+        alt_stars = f', {data["stars"]:,} stars'
 
     username = data["username"]
+
+    alt = (
+        f'{data["contributions"]:,} contributions and '
+        f'{data["active_days"]:,} active days in the last year, '
+        f'{data["original_repositories"]:,} original public repositories'
+        f'{alt_stars}, {data["followers"]:,} followers'
+    )
 
     return "\n".join([
         START,
         "",
+        '<p align="center">',
+        f'  <a href="https://github.com/{username}#overview">',
+        f'    <img src="./assets/signal.svg" width="100%" alt="{escape(alt)}" />',
+        "  </a>",
+        "</p>",
+        "",
         '<div align="center">',
         "",
         (
-            f'### ⚡ {data["contributions"]:,} contributions '
-            f'in the last year &nbsp; · &nbsp; '
-            f'{data["active_days"]:,} active days'
-        ),
-        "",
-        (
+            f'<sub>**{data["contributions"]:,}** contributions · '
+            f'**{data["active_days"]:,}** active days · '
             f'**{data["original_repositories"]:,}** '
             f'original public repositories'
             f'{stars} &nbsp; / &nbsp; '
-            f'**{data["followers"]:,}** followers'
-        ),
-        "",
-        (
-            f'<sub>Last 365 UTC dates · updated {timestamp} · '
+            f'**{data["followers"]:,}** followers · '
+            f'last 365 UTC dates · updated {timestamp} · '
             f'{escape(data["contribution_source"])}</sub>'
-        ),
-        "",
-        (
-            "[View GitHub’s contribution calendar ↗]"
-            f"(https://github.com/{username}#overview)"
         ),
         "",
         "</div>",
@@ -430,6 +440,13 @@ def main():
     _, after = tail.split(END, 1)
 
     updated = before + markdown(data) + after
+
+    assets = ROOT / "assets"
+    assets.mkdir(exist_ok=True)
+    (assets / "signal.svg").write_text(
+        section_art.signal_svg(data),
+        encoding="utf-8",
+    )
 
     # Replace the README only after fetching and validation succeed.
     temporary_file = readme_path.with_suffix(".md.tmp")

@@ -9,6 +9,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 
+import section_art
+
 
 ROOT = Path(__file__).resolve().parent
 
@@ -186,85 +188,30 @@ def render_readme(data):
     name = html_text(data["name"])
     bio = html_text(data["bio"])
 
-    # Build project cards from data.json.
-    project_rows = []
+    # Visual panels (animated SVGs) are generated from data.json.
+    section_art.write_static_assets(data, ROOT / "assets")
 
-    for index, project in enumerate(data["projects"], start=1):
-        project_name = html_text(project["name"])
-        tag = html_text(project["tag"])
-        summary = html_text(project["summary"])
-        tech = html_text(project["tech"])
-        url = html_text(safe_url(project["url"]))
-
-        project_rows.append(
-            f"""
-<tr>
-  <td width="11%" align="center">
-    <br />
-    <strong>0{index}</strong>
-    <br />
-    <sub>MISSION</sub>
-    <br /><br />
-    ◈
-    <br /><br />
-  </td>
-  <td width="65%">
-    <br />
-    <strong>▰ {project_name}</strong>
-    <br />
-    <sub>⌁ {tag}</sub>
-    <br /><br />
-    {summary}
-    <br /><br />
-    <code>{tech}</code>
-    <br /><br />
-  </td>
-  <td width="24%" align="center">
-    <br />
-    <sub>ACCESS POINT</sub>
-    <br /><br />
-    <a href="{url}">
-      <strong>OPEN REPO ↗</strong>
-    </a>
-    <br /><br />
-  </td>
-</tr>
-""".strip()
+    def header(number, title):
+        return (
+            f'<h2 align="center">\n'
+            f'  <img src="./assets/section-{number:02}.svg" width="100%"\n'
+            f'       alt="{number:02} / {title}" />\n'
+            f'</h2>'
         )
 
-    project_table = "\n".join(project_rows)
+    mission_cards = "\n\n".join(
+        f'''<p align="center">
+  <a href="{html_text(safe_url(project["url"]))}">
+    <img src="./assets/mission-{index:02}.svg" width="100%"
+         alt="Mission {index:02}: {html_text(project["name"])} — {html_text(project["summary"])}" />
+  </a>
+</p>'''
+        for index, project in enumerate(data["projects"], start=1)
+    )
 
-    # Build toolkit modules from the existing stack in data.json.
-    stack_rows = []
-
-    for index, (category, technologies) in enumerate(
-        data["stack"].items(),
-        start=1,
-    ):
-        category_text = html_text(category)
-
-        technology_text = " &nbsp; ".join(
-            f"<code>{html_text(item)}</code>"
-            for item in technologies
-        )
-
-        stack_rows.append(
-            f"""
-<tr>
-  <td width="10%" align="center">
-    <strong>{index:02}</strong>
-  </td>
-  <td width="25%">
-    <strong>◈ {category_text}</strong>
-  </td>
-  <td width="65%">
-    {technology_text}
-  </td>
-</tr>
-""".strip()
-        )
-
-    stack_table = "\n".join(stack_rows)
+    stack_desc = html_text(
+        "; ".join(f"{k}: {', '.join(v)}" for k, v in data["stack"].items())
+    )
 
     readme = f"""<p align="center">
   <img
@@ -288,71 +235,46 @@ def render_readme(data):
   <a href="{linkedin}">[ LINKEDIN ↗ ]</a>
 </p>
 
----
-
-## ▓▒░ 01 / SYSTEM PROFILE
-
-> `IDENTITY LOADED` &nbsp; ◈ &nbsp; `LOCATION: IIT INDORE` &nbsp; ◈ &nbsp; `STATUS: BUILDING`
+{header(1, "SYSTEM PROFILE")}
 
 <table width="100%">
 <tr>
-  <td width="58%" valign="top">
-
-### ◈ THE OPERATOR
-
-{bio}
-
-I enjoy connecting collaborative software, campus tools, and voice AI with practical problems.
-
-<br />
-
-**CURRENT DIRECTIVES**
-
-`01` &nbsp; Build useful products  
-`02` &nbsp; Solve challenging problems  
-`03` &nbsp; Keep experimenting
-
-<br />
-
-<a href="{github}">
-  <img
-    src="https://img.shields.io/badge/GITHUB-OPEN_PROFILE-000000?style=for-the-badge&amp;logo=github&amp;logoColor=00ffcc&amp;labelColor=09090b&amp;color=003d32"
-    alt="GitHub profile"
-  />
-</a>
-<a href="{linkedin}">
-  <img
-    src="https://img.shields.io/badge/LINKEDIN-CONNECT-000000?style=for-the-badge&amp;logo=linkedin&amp;logoColor=ff0055&amp;labelColor=09090b&amp;color=4d001a"
-    alt="LinkedIn profile"
-  />
-</a>
-
+  <td width="62%" valign="middle">
+    <img src="./assets/profile-terminal.svg" width="100%"
+         alt="Terminal: {name}, {html_text(data["title"])}. {bio}" />
   </td>
-  <td width="42%" align="center" valign="middle">
-
-<img
-  src="./assets/waneella.gif"
-  width="300"
-  alt="Animated pixel-art workspace"
-/>
-
-<br />
-
-<sub>◉ &nbsp; WORKSPACE FEED // ACTIVE</sub>
-
+  <td width="38%" align="center" valign="middle">
+    <img src="./assets/feed-label.svg" width="300" alt="Workspace feed active" />
+    <br />
+    <img
+      src="./assets/waneella.gif"
+      width="300"
+      alt="Animated pixel-art workspace"
+    />
   </td>
 </tr>
 </table>
 
+<p align="center">
+  <a href="{github}">
+    <img
+      src="https://img.shields.io/badge/GITHUB-OPEN_PROFILE-000000?style=for-the-badge&amp;logo=github&amp;logoColor=00ffcc&amp;labelColor=09090b&amp;color=003d32"
+      alt="GitHub profile"
+    />
+  </a>
+  <a href="{linkedin}">
+    <img
+      src="https://img.shields.io/badge/LINKEDIN-CONNECT-000000?style=for-the-badge&amp;logo=linkedin&amp;logoColor=ff0055&amp;labelColor=09090b&amp;color=4d001a"
+      alt="LinkedIn profile"
+    />
+  </a>
+</p>
+
 <br />
 
-## ▓▒░ 02 / FEATURED MISSIONS
+{header(2, "FEATURED MISSIONS")}
 
-> `PROJECT ARCHIVE` &nbsp; ◈ &nbsp; Selected builds, experiments, and deployments.
-
-<table width="100%">
-{project_table}
-</table>
+{mission_cards}
 
 <p align="right">
   <a href="{github}?tab=repositories">
@@ -362,20 +284,12 @@ I enjoy connecting collaborative software, campus tools, and voice AI with pract
 
 <br />
 
-## ▓▒░ 03 / THE TOOLKIT
+{header(3, "THE TOOLKIT")}
 
-> `MODULE INVENTORY` &nbsp; ◈ &nbsp; Technologies I use to turn ideas into working systems.
-
-<table width="100%">
-<tr>
-  <th align="center">ID</th>
-  <th align="left">MODULE</th>
-  <th align="left">INSTALLED TECHNOLOGIES</th>
-</tr>
-{stack_table}
-</table>
-
-<br />
+<p align="center">
+  <img src="./assets/toolkit.svg" width="100%"
+       alt="Toolkit: {stack_desc}" />
+</p>
 
 <details>
 <summary><strong>◈ &nbsp; EXPAND / DEVELOPMENT DIRECTIVES</strong></summary>
@@ -390,44 +304,21 @@ I enjoy connecting collaborative software, campus tools, and voice AI with pract
 
 <br />
 
-## ▓▒░ 04 / GITHUB SIGNAL
-
-> `ACTIVITY FEED` &nbsp; ◈ &nbsp; A snapshot of recent GitHub activity.
-
-<table width="100%">
-<tr>
-  <td width="75%" valign="top">
-
-### ◉ TRANSMISSION LOG
+{header(4, "GITHUB SIGNAL")}
 
 {activity}
 
-  </td>
-  <td width="25%" align="center" valign="middle">
-
-**SIGNAL LINKS**
-
-<br />
-
-<a href="{github}">
-  [ PROFILE ↗ ]
-</a>
-
-<br /><br />
-
-<a href="{github}?tab=repositories">
-  [ REPOSITORIES ↗ ]
-</a>
-
-<br /><br />
-
-<a href="{github}#overview">
-  [ CONTRIBUTIONS ↗ ]
-</a>
-
-  </td>
-</tr>
-</table>
+<p align="center">
+  <a href="{github}">
+    <img src="https://img.shields.io/badge/PROFILE-OPEN-000000?style=for-the-badge&amp;logo=github&amp;logoColor=ffb020&amp;labelColor=09090b&amp;color=3d2a00" alt="Open GitHub profile" />
+  </a>
+  <a href="{github}?tab=repositories">
+    <img src="https://img.shields.io/badge/REPOSITORIES-BROWSE-000000?style=for-the-badge&amp;logo=github&amp;logoColor=00ffcc&amp;labelColor=09090b&amp;color=003d32" alt="Browse repositories" />
+  </a>
+  <a href="{github}#overview">
+    <img src="https://img.shields.io/badge/CONTRIBUTIONS-VIEW-000000?style=for-the-badge&amp;logo=github&amp;logoColor=ff0055&amp;labelColor=09090b&amp;color=4d001a" alt="View contributions" />
+  </a>
+</p>
 
 <br />
 

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="180"
+     viewBox="0 0 1100 180" role="img" aria-labelledby="t d"
+     font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','Courier New',monospace">
+  <title id="t">Mission 03: INSTIBUS</title>
+  <desc id="d">INSTIBUS — Campus transit, trip bookings and seat availability. Tech: Next.js / PostgreSQL.</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#a78bfa" stroke-opacity=".08"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d151c"/>
+      <stop offset="1" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#a78bfa" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip"><path d="M20 0H1100V160L1080 180H0V20Z"/></clipPath>
+  </defs>
+  <path d="M20 0H1100V160L1080 180H0V20Z" fill="url(#bg)"/>
+  <path d="M20 0H1100V160L1080 180H0V20Z" fill="url(#grid)"/>
+  <g clip-path="url(#clip)">
+    <rect x="-200" y="0" width="200" height="180" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate"
+        from="0 0" to="1300 0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <path d="M20 0H1100V160L1080 180H0V20Z" fill="none" stroke="#a78bfa" stroke-opacity=".32" stroke-width="1.2"/>
+  <path d="M20 0H1100V160L1080 180H0V20Z" fill="none" stroke="#a78bfa" stroke-width="2.2"
+        pathLength="1000" stroke-dasharray="90 910" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0"
+             dur="7s" repeatCount="indefinite"/>
+  </path>
+  <path d="M1060 10H1090V40" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <path d="M10 140V170H40" fill="none" stroke="#a78bfa" stroke-width="2"/>
+
+  <text x="34" y="104" font-size="70" font-weight="800" fill="none"
+        stroke="#a78bfa" stroke-width="1.5" filter="url(#glow)">03</text>
+  <text x="38" y="132" font-size="11" fill="#6b8a99" letter-spacing="5">MISSION</text>
+  <path d="M158 24V156" stroke="#a78bfa" stroke-opacity=".35" stroke-dasharray="3 5"/>
+
+  
+  <g>
+    <path d="M194 22H321V38L315 44H188V28Z"
+          fill="#a78bfa" fill-opacity=".10" stroke="#a78bfa" stroke-opacity=".7"/>
+    <text x="254.5" y="36.96" font-size="11"
+          fill="#a78bfa" text-anchor="middle">CAMPUS TRANSPORT</text>
+  </g>
+  <text x="188" y="86" font-size="30" font-weight="800" fill="#eafffb"
+        letter-spacing="2" filter="url(#glow)">INSTIBUS</text>
+  <text x="188" y="116" font-size="15" fill="#b8cfd0">Campus transit, trip bookings and seat availability.</text>
+  
+  <g><animate attributeName="opacity" values="1;.6;1" dur="3.2s" begin="0.0s" repeatCount="indefinite"/>
+    <path d="M194 132H268V154L262 160H188V138Z"
+          fill="#b8cfd0" fill-opacity=".10" stroke="#b8cfd0" stroke-opacity=".7"/>
+    <text x="228.0" y="150.68" font-size="13"
+          fill="#b8cfd0" text-anchor="middle">Next.js</text>
+  </g>
+  <g><animate attributeName="opacity" values="1;.6;1" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
+    <path d="M284 132H383V154L377 160H278V138Z"
+          fill="#b8cfd0" fill-opacity=".10" stroke="#b8cfd0" stroke-opacity=".7"/>
+    <text x="330.5" y="150.68" font-size="13"
+          fill="#b8cfd0" text-anchor="middle">PostgreSQL</text>
+  </g>
+
+  <text x="960" y="52" font-size="11" fill="#6b8a99" text-anchor="middle"
+        letter-spacing="4">ACCESS POINT</text>
+  <g>
+    <path d="M868 66H1052V96L1038 110H858V80Z" fill="#a78bfa" fill-opacity=".14"
+          stroke="#a78bfa" stroke-width="1.6" filter="url(#glow)">
+      <animate attributeName="fill-opacity" values=".10;.28;.10" dur="2.4s"
+               repeatCount="indefinite"/>
+    </path>
+    <text x="944" y="94" font-size="15" font-weight="700" fill="#a78bfa"
+          text-anchor="middle" letter-spacing="2">OPEN REPO</text>
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0;3 -3;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <path d="M1000 90L1009 81M1001 81H1009V89" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="square"/>
+    </g>
+  </g>
+</svg>

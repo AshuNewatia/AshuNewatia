@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="204"
+     viewBox="0 0 1100 204" role="img" aria-labelledby="t d"
+     font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','Courier New',monospace">
+  <title id="t">GitHub activity signal</title>
+  <desc id="d">487 contributions and 74 active days in the last year, 5 original public repositories, 4 followers.</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffb020" stroke-opacity=".08"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d151c"/>
+      <stop offset="1" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb020" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ffb020" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#ffb020" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip"><path d="M22 0H1100V182L1078 204H0V22Z"/></clipPath>
+  </defs>
+  <path d="M22 0H1100V182L1078 204H0V22Z" fill="url(#bg)"/>
+  <path d="M22 0H1100V182L1078 204H0V22Z" fill="url(#grid)"/>
+  <g clip-path="url(#clip)">
+    <rect x="-200" y="0" width="200" height="204" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate"
+        from="0 0" to="1300 0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <path d="M22 0H1100V182L1078 204H0V22Z" fill="none" stroke="#ffb020" stroke-opacity=".32" stroke-width="1.2"/>
+  <path d="M22 0H1100V182L1078 204H0V22Z" fill="none" stroke="#ffb020" stroke-width="2.2"
+        pathLength="1000" stroke-dasharray="90 910" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0"
+             dur="7s" repeatCount="indefinite"/>
+  </path>
+  <path d="M1060 10H1090V40" fill="none" stroke="#ffb020" stroke-width="2"/>
+  <path d="M10 164V194H40" fill="none" stroke="#ffb020" stroke-width="2"/>
+
+  <g>
+    <path d="M44.0 28H279.0V128L267.0 140H32.0V40Z"
+          fill="#00ffcc" fill-opacity=".05" stroke="#00ffcc" stroke-opacity=".45"/>
+    <path d="M32.0 40L44.0 28" stroke="#00ffcc" stroke-width="2.4"/>
+    <text x="50.0" y="54" font-size="11" fill="#6b8a99"
+          letter-spacing="3">CONTRIBUTIONS</text>
+    <text x="50.0" y="104" font-size="48" font-weight="800"
+          fill="#00ffcc" filter="url(#glow)">487
+      <animate attributeName="opacity" values="1;.75;1" dur="3.5s"
+               begin="0.0s" repeatCount="indefinite"/>
+    </text>
+    <text x="50.0" y="127" font-size="10" fill="#b8cfd0"
+          letter-spacing="2">LAST 365 DAYS</text>
+  </g>
+  <g>
+    <path d="M307.0 28H542.0V128L530.0 140H295.0V40Z"
+          fill="#ff0055" fill-opacity=".05" stroke="#ff0055" stroke-opacity=".45"/>
+    <path d="M295.0 40L307.0 28" stroke="#ff0055" stroke-width="2.4"/>
+    <text x="313.0" y="54" font-size="11" fill="#6b8a99"
+          letter-spacing="3">ACTIVE DAYS</text>
+    <text x="313.0" y="104" font-size="48" font-weight="800"
+          fill="#ff0055" filter="url(#glow)">74
+      <animate attributeName="opacity" values="1;.75;1" dur="3.5s"
+               begin="0.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="313.0" y="127" font-size="10" fill="#b8cfd0"
+          letter-spacing="2">OF 365</text>
+  </g>
+  <g>
+    <path d="M570.0 28H805.0V128L793.0 140H558.0V40Z"
+          fill="#a78bfa" fill-opacity=".05" stroke="#a78bfa" stroke-opacity=".45"/>
+    <path d="M558.0 40L570.0 28" stroke="#a78bfa" stroke-width="2.4"/>
+    <text x="576.0" y="54" font-size="11" fill="#6b8a99"
+          letter-spacing="3">REPOSITORIES</text>
+    <text x="576.0" y="104" font-size="48" font-weight="800"
+          fill="#a78bfa" filter="url(#glow)">5
+      <animate attributeName="opacity" values="1;.75;1" dur="3.5s"
+               begin="1.0s" repeatCount="indefinite"/>
+    </text>
+    <text x="576.0" y="127" font-size="10" fill="#b8cfd0"
+          letter-spacing="2">ORIGINAL · PUBLIC</text>
+  </g>
+  <g>
+    <path d="M833.0 28H1068.0V128L1056.0 140H821.0V40Z"
+          fill="#ffb020" fill-opacity=".05" stroke="#ffb020" stroke-opacity=".45"/>
+    <path d="M821.0 40L833.0 28" stroke="#ffb020" stroke-width="2.4"/>
+    <text x="839.0" y="54" font-size="11" fill="#6b8a99"
+          letter-spacing="3">FOLLOWERS</text>
+    <text x="839.0" y="104" font-size="48" font-weight="800"
+          fill="#ffb020" filter="url(#glow)">4
+      <animate attributeName="opacity" values="1;.75;1" dur="3.5s"
+               begin="1.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="839.0" y="127" font-size="10" fill="#b8cfd0"
+          letter-spacing="2">GITHUB</text>
+  </g>
+  
+  <circle cx="40" cy="176" r="4" fill="#ffb020" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="54" y="180" font-size="11" fill="#b8cfd0"
+        letter-spacing="2">LIVE SNAPSHOT  //  19 NOV 2026 · 04:14 UTC  //  GITHUB GRAPHQL API</text>
+</svg>

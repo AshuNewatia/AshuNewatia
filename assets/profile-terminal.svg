@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="416"
+     viewBox="0 0 680 416" role="img" aria-labelledby="t d"
+     font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','Courier New',monospace">
+  <title id="t">Operator terminal</title>
+  <desc id="d">Terminal window introducing Ashu Newatia: Building real-time products and intelligent interfaces.</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#00ffcc" stroke-opacity=".08"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d151c"/>
+      <stop offset="1" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00ffcc" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#00ffcc" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#00ffcc" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip"><path d="M18 0H680V398L662 416H0V18Z"/></clipPath>
+  </defs>
+  <path d="M18 0H680V398L662 416H0V18Z" fill="url(#bg)"/>
+  <path d="M18 0H680V398L662 416H0V18Z" fill="url(#grid)"/>
+  <g clip-path="url(#clip)">
+    <rect x="-200" y="0" width="200" height="416" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate"
+        from="0 0" to="880 0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <path d="M18 0H680V398L662 416H0V18Z" fill="none" stroke="#00ffcc" stroke-opacity=".32" stroke-width="1.2"/>
+  <path d="M18 0H680V398L662 416H0V18Z" fill="none" stroke="#00ffcc" stroke-width="2.2"
+        pathLength="1000" stroke-dasharray="90 910" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0"
+             dur="7s" repeatCount="indefinite"/>
+  </path>
+  <path d="M640 10H670V40" fill="none" stroke="#00ffcc" stroke-width="2"/>
+  <path d="M10 376V406H40" fill="none" stroke="#00ffcc" stroke-width="2"/>
+
+  <path d="M0 18H680V44H0Z" fill="#00ffcc" fill-opacity=".07"/>
+  <path d="M0 44H680" stroke="#00ffcc" stroke-opacity=".3"/>
+  <circle cx="30" cy="31" r="5" fill="#ff0055"/>
+  <circle cx="50" cy="31" r="5" fill="#ffb020"/>
+  <circle cx="70" cy="31" r="5" fill="#00ffcc"/>
+  <text x="340.0" y="35" font-size="12" fill="#6b8a99" text-anchor="middle"
+        letter-spacing="2">ashu — zsh — 80×24</text>
+  <clipPath id="r1"><rect x="28" y="66" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.040;0.075;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="82" font-size="14" clip-path="url(#r1)"><tspan fill="#00ffcc">operator@iit-indore</tspan><tspan fill="#6b8a99">:~$ </tspan><tspan fill="#eafffb">whoami</tspan></text>
+  <clipPath id="r2"><rect x="28" y="90" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.098;0.133;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="106" font-size="14" fill="#b8cfd0" clip-path="url(#r2)">Ashu Newatia  ·  B.TECH CSE / IIT INDORE</text>
+  <clipPath id="r3"><rect x="28" y="126" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.157;0.192;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="142" font-size="14" clip-path="url(#r3)"><tspan fill="#00ffcc">operator@iit-indore</tspan><tspan fill="#6b8a99">:~$ </tspan><tspan fill="#eafffb">cat bio.txt</tspan></text>
+  <clipPath id="r4"><rect x="28" y="150" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.215;0.250;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="166" font-size="14" fill="#b8cfd0" clip-path="url(#r4)">Building real-time products and intelligent interfaces.</text>
+  <clipPath id="r5"><rect x="28" y="174" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.273;0.308;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="190" font-size="14" fill="#b8cfd0" clip-path="url(#r5)">Connecting collaborative software, campus tools</text>
+  <clipPath id="r6"><rect x="28" y="198" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.332;0.367;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="214" font-size="14" fill="#b8cfd0" clip-path="url(#r6)">and voice AI with practical problems.</text>
+  <clipPath id="r7"><rect x="28" y="234" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.390;0.425;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="250" font-size="14" clip-path="url(#r7)"><tspan fill="#00ffcc">operator@iit-indore</tspan><tspan fill="#6b8a99">:~$ </tspan><tspan fill="#eafffb">ls directives/</tspan></text>
+  <clipPath id="r8"><rect x="28" y="258" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.448;0.483;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="46" y="274" font-size="14" clip-path="url(#r8)"><tspan fill="#ff0055">01</tspan><tspan fill="#b8cfd0">_build_useful_products</tspan></text>
+  <clipPath id="r9"><rect x="28" y="282" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.507;0.542;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="46" y="298" font-size="14" clip-path="url(#r9)"><tspan fill="#ff0055">02</tspan><tspan fill="#b8cfd0">_solve_challenging_problems</tspan></text>
+  <clipPath id="r10"><rect x="28" y="306" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.565;0.600;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="46" y="322" font-size="14" clip-path="url(#r10)"><tspan fill="#ff0055">03</tspan><tspan fill="#b8cfd0">_keep_experimenting</tspan></text>
+  <clipPath id="r11"><rect x="28" y="342" width="640" height="22">
+    <animate attributeName="width" values="0;0;640;640"
+             keyTimes="0;0.623;0.658;1" dur="16s" repeatCount="indefinite"/>
+  </rect></clipPath><text x="28" y="358" font-size="14" clip-path="url(#r11)"><tspan fill="#00ffcc">operator@iit-indore</tspan><tspan fill="#6b8a99">:~$ </tspan><tspan fill="#eafffb">status</tspan></text>
+  <g>
+    <animate attributeName="opacity" values="0;0;1;1"
+             keyTimes="0;0.711;0.731;1"
+             dur="16s" repeatCount="indefinite"/>
+    <circle cx="36" cy="377" r="4" fill="#00ffcc" filter="url(#glow)"/>
+    <text x="50" y="382" font-size="14" font-weight="700" fill="#00ffcc"
+          letter-spacing="2" filter="url(#glow)">BUILDING</text>
+    <rect x="140" y="369" width="9" height="16" fill="#00ffcc">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
